@@ -1,0 +1,89 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+html{
+ }
+body{
+    /*font-family: Palatino Linotype, Helvetica Neue, Helvetica, Arial, sans-serif;*/
+    font-family: sans-serif;
+    font-size: 12pt;
+}
+
+/*Body*/
+.body-color:{
+	color:#000;
+	background-color:#f1f1f1
+}
+
+/*Page*/
+.page-background{
+  background: white;
+}
+.page-max-width{
+	max-width:980px
+}
+.page-margin-top{
+	margin-top:16px
+}
+
+
+.paper-block {
+  background-color: white;
+  font-size: 14px !important;
+}
+
+.paper-img {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.paper-title{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+}
+
+.paper-author{
+  font-size: 14px !important;
+}
+
+.paper-conf{
+  font-size: 14px !important;
+  font-style: italic !important;
+}
+
+/*container size*/
+.title{
+    font-size: 20pt;
+    font-weight: bold;
+}
+.subtitle{
+    font-size: 16pt;
+    font-weight: bold;
+}
+
+.project_img{padding-bottom:-32px}
+.project_text{padding-left:32px;padding-right:32px;padding-bottom:32px}
+
+/*Footer*/
+.footer-color{
+	color:#000;
+	background-color:#fff
+	}
+.footer-margin-top{margin-top:16px}
+
+/*Text*/
+.text-center{text-align:center}
+
+/*Grid*/
+.grid-row-padding{padding-left:16px;padding-right:16px}
+
+/*Grid*/
+.grid-bottom-padding{padding-bottom:160px}
+
+

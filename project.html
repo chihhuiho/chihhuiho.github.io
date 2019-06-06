@@ -3,16 +3,18 @@
 <title>Chih-Hui (John) Ho</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- CSS  -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 <style>
 html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 </style>
-<body class="w3-light-grey">
+<body class="body-color">
 
 <!-- Page Container -->
-<div class="w3-content w3-margin-top" style="max-width:1400px;">
+<div class="page-max-width page-margin-top" style="max-width:1400px;">
 
   <!-- The Grid -->
   <div class="w3-row-padding">
@@ -24,97 +26,136 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 
         <div class="w3-container">
 		     
-            <h2><b>Selected Research Projects</b></h2>
-			
-	
-        
-      <!-- UCSD CSE 252c -->
-      <div class="w3-container">
-                  <h5 class="w3-opacity"><b>Selected Topics in Vision and Learning</b></h5>
-              <h6 class="w3-opacity"><b>University of California San Diego (UCSD) CSE 252C </b></h6>
-                  <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>March 2018 - June 2018</h6>
-                   <li> Implementation of Unsupervised Domain Adaptation by Backpropagation <a href="http://proceedings.mlr.press/v37/ganin15.pdf" style="text-decoration: none"> </li>
-                   <!--  <a href="https://youtu.be/g5tZeVLYU70" style="text-decoration: none">[Video]</a> -->
-                   <a href="project\ucsd_cse_252c\presentation.pdf" style="text-decoration: none">[Presentation]</a>
-                   <a href="https://github.com/neoqy/DDA" style="text-decoration: none">[Code]</a>
-                   <a href="project\ucsd_cse_252c\report.pdf" style="text-decoration: none">[Pdf]</a>
-                   
-              <hr>
-        </div>
- 
+		<h2 class="w3-text-black w3-padding-16"><b><i class="fa fa-book fa-fw w3-margin-right w3-text-blue"></i><a href="volunteer.html"  style="text-decoration: none"><b>Research Projects</b></a></b></h2>
+
+		<!-- UCSD OOWL -->
+	   <div class="w3-container">
+			<div class="w3-quarter">
+				<img src="project/oowl/logo.jpg" height="60%" width="60%">
+			</div>  
+			<div class="w3-threequarter">
+			  <h5 class="w3-text-black"><a href="http://www.svcl.ucsd.edu/projects/OOWL/" style="text-decoration: none">
+			  <b>Objects Obtained With fLight (OOWL)</b></a></h5>
+			  <h6 class="w3-text-black">University of California San Diego (UCSD) Statistical Visual Computing Lab (SVCL)</h6>
+			  <h6 class="w3-text-grey"><i class="fa fa-calendar fa-fw w3-margin-right"></i>March 2018 - Present</h6> 
+			  <li> Large-scale 3D reconstruction of real objects</li>
+			  <li> Study of multiview embedding, pose invariant embedding</li>
+			  <li> Study of real world adversarial attack</li>
+			  <a href="http://www.svcl.ucsd.edu/projects/OOWL/" style="text-decoration: none">[Project]</a>
+			  <hr>
+			</div>
+		</div>
+		
+		
+		<!-- UCSD CSE 252c -->
+	   <div class="w3-container">
+			<div class="w3-quarter">
+				<img src="project/ucsd_cse_252c/logo.png" height="85%" width="85%">
+			</div>  
+			<div class="w3-threequarter">
+			  <h5 class="w3-text-black"><a href="https://cseweb.ucsd.edu/classes/sp18/cse252C-a/" style="text-decoration: none">
+			  <b>Selected Topics in Vision and Learning</b></a></h5>
+			  <h6 class="w3-text-black">University of California San Diego (UCSD) CSE 252C</h6>
+			  <h6 class="w3-text-grey"><i class="fa fa-calendar fa-fw w3-margin-right"></i>March 2018 - June 2018</h6> 
+			  <li> Implementation of <a href="http://proceedings.mlr.press/v37/ganin15.pdf" style="text-decoration: none">Unsupervised Domain Adaptation by Backpropagation</a></li> 
+			  <a href="project\ucsd_cse_252c\presentation.pdf" style="text-decoration: none">[Presentation]</a>
+		      <a href="https://github.com/neoqy/DDA" style="text-decoration: none">[Code]</a>
+		      <a href="project\ucsd_cse_252c\report.pdf" style="text-decoration: none">[Pdf]</a>
+			  <hr>
+			</div>
+		</div>
+					
+
+	    <!-- UCSD CSE 276c -->
+	   <div class="w3-container">
+			<div class="w3-quarter">
+				<img src="project/ucsd_ece_276/logo.png" height="85%" width="85%">
+			</div>  
+			<div class="w3-threequarter">
+			  <h5 class="w3-text-black"><a href="https://cseweb.ucsd.edu/classes/sp18/cse252C-a/" style="text-decoration: none">
+			  <b>Robot Reinforcement Learning</b></a></h5>
+			  <h6 class="w3-text-black">University of California San Diego (UCSD) ECE 276</h6>
+			  <h6 class="w3-text-grey"><i class="fa fa-calendar fa-fw w3-margin-right"></i>March 2018 - June 2018</h6> 
+			  <li> Implementation of advantage actor critic with experience replay</li> 
+			   <a href="https://www.youtube.com/watch?v=RrwP7PyQ0IA&t=601s" style="text-decoration: none">[Video]</a>
+			   <a href="project\ucsd_ece_276\presentation.pdf" style="text-decoration: none">[Presentation]</a>
+			   <a href="https://bitbucket.org/peter_chun_hu/276_hw4/src/master/" style="text-decoration: none">[Code]</a>
+			   <a href="project\ucsd_ece_276\poster.pdf" style="text-decoration: none">[Poster]</a>
+			   <a href="https://www.youtube.com/watch?v=J8iQeNXe16o" style="text-decoration: none">[Trailer]</a>
+			   <a href="project\ucsd_ece_276\report.pdf" style="text-decoration: none">[Pdf]</a>
+			  <hr>
+			</div>
+		</div>
+
+	    <!-- UCSD CSE 253 -->
+	   <div class="w3-container">
+			<div class="w3-quarter">
+				<img src="project/ucsd_cse_253/logo.png" height="85%" width="85%">
+			</div>  
+			<div class="w3-threequarter">
+			  <h5 class="w3-text-black"><b>Neural Network for Pattern Recognition</b></h5>
+			  <h6 class="w3-text-black">University of California San Diego (UCSD) CSE 253 </h6>
+			  <h6 class="w3-text-grey"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jan 2018 - March 2018</h6>
+			  <li> <a href="https://www.kaggle.com/c/data-science-bowl-2018" style="text-decoration: none">  Kaggle 2018 data science bowl </a></li> 
+			   <a href="https://youtu.be/g5tZeVLYU70" style="text-decoration: none">[Video]</a>
+			   <a href="project\ucsd_cse_253\presentation.pdf" style="text-decoration: none">[Presentation]</a>
+			   <a href="project\ucsd_cse_253\report.pdf" style="text-decoration: none">[Pdf]</a>
+			  <hr>
+			</div>
+		</div>
+
+	    <!-- UIUC -->
+	   <div class="w3-container">
+			<div class="w3-quarter">
+				<img src="img/uiuc_logo.jpg" height="50%" width="50%">
+			</div>  
+			<div class="w3-threequarter">
+			  <h5 class="w3-text-black"><b>Individual Study</b></h5>
+			  <h6 class="w3-text-black">University of Illinois at Urbana-Champaign (UIUC) </h6>
+			  <h6 class="w3-text-grey"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jan 2016 - May 2016</h6>
+			  <li> Individual Study with <a href="http://slazebni.cs.illinois.edu/" style="text-decoration: none"> Prof. Svetlana Lazebnik</a></li>
+			  <li> Design deep learning assignment 4 for <a href="http://slazebni.cs.illinois.edu/spring16/" style="text-decoration: none"> UIUC Spring 2016 CS543/ECE549: Computer Vision</a></li> 			  
+			   <a href="https://www.kaggle.com/c/computer-vision-cs543-ece549" style="text-decoration: none">[Kaggle]</a>
+			  <hr>
+			</div>
+		</div>
 
 
-      <!-- UCSD CSE 276 -->
-      <div class="w3-container">
-                  <h5 class="w3-opacity"><b>Robot Reinforcement Learning</b></h5>
-              <h6 class="w3-opacity"><b>University of California San Diego (UCSD) ECE 276 </b></h6>
-                  <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>March 2018 - June 2018</h6>
-                   <li> Advantage actor critic with experience replay </li>
-                   <a href="https://www.youtube.com/watch?v=RrwP7PyQ0IA&t=601s" style="text-decoration: none">[Video]</a>
-                   <a href="project\ucsd_ece_276\presentation.pdf" style="text-decoration: none">[Presentation]</a>
-                   <a href="https://bitbucket.org/peter_chun_hu/276_hw4/src/master/" style="text-decoration: none">[Code]</a>
-                   <a href="project\ucsd_ece_276\poster.pdf" style="text-decoration: none">[Poster]</a>
-                   <a href="https://www.youtube.com/watch?v=J8iQeNXe16o" style="text-decoration: none">[Trailer]</a>
-                   <a href="project\ucsd_ece_276\report.pdf" style="text-decoration: none">[Pdf]</a>
-                   
-              <hr>
-        </div>
+	    <!-- Cornell -->
+	   <div class="w3-container">
+			<div class="w3-quarter">
+				<img src="project/cornell/logo.png" height="85%" width="85%">
+			</div>  
+			<div class="w3-threequarter">
+			  <h5 class="w3-text-black"><b>Image collage based on emotional region of interest (ROI)</b></h5>
+			  <h6 class="w3-text-black">Cornell University Advanced Multimedia lab </h6>
+			  <h6 class="w3-text-grey"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jul 2014 - Aug 2014</h6>
+			  <li> Summer intern student in <a href="http://chenlab.ece.cornell.edu/" style="text-decoration: none">  Advanced Multimedia Lab </a> directed by Prof. Tsuhan Chen </a></li> 
+			  <li> Utilizing the emotional ROI, our system stochastically generated image collage which displayed the salient region with the most emotion </a></li> 
+			   <a href="project\cornell\report.pdf" style="text-decoration: none">[Pdf]</a>
+               <a href="https://youtu.be/TKInWk_gs0k" style="text-decoration: none">[Video]</a>
+			  <hr>
+			</div>
+		</div>
 
-      <!-- UCSD CSE 253 -->
-      <div class="w3-container">
-                  <h5 class="w3-opacity"><b>Neural Network for Pattern Recognition</b></h5>
-              <h6 class="w3-opacity"><b>University of California San Diego (UCSD) CSE 253 </b></h6>
-                  <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jan 2018 - March 2018</h6>
-                   <li> Kaggle 2018 data science bowl <a href="https://www.kaggle.com/c/data-science-bowl-2018" style="text-decoration: none"> </a></li>
-                   <a href="https://youtu.be/g5tZeVLYU70" style="text-decoration: none">[Video]</a>
-                   <a href="project\ucsd_cse_253\presentation.pdf" style="text-decoration: none">[Presentation]</a>
-                   <!-- <a href="https://youtu.be/g5tZeVLYU70" style="text-decoration: none">[Code]</a> -->
-                   <a href="project\ucsd_cse_253\report.pdf" style="text-decoration: none">[Pdf]</a>
-                   
-              <hr>
-        </div>
-
-
-          <!-- UIUC -->
-      <div class="w3-container">
-                  <h5 class="w3-opacity"><b>Individual Study</b></h5>
-              <h6 class="w3-opacity"><b>University of Illinois at Urbana-Champaign (UIUC)</b></h6>
-                  <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jan 2016 - May 2016</h6>
-                   <li> Individual Study with <a href="http://slazebni.cs.illinois.edu/" style="text-decoration: none"> Prof. Svetlana Lazebnik</a></li>
-               <li> Design deep learning assignment 4 for <a href="http://slazebni.cs.illinois.edu/spring16/" style="text-decoration: none"> UIUC Spring 2016 CS543/ECE549: Computer Vision</a></li>
-                   <a href="https://www.kaggle.com/c/computer-vision-cs543-ece549" style="text-decoration: none">[Kaggle]</a>
-                   <a href="http://slazebni.cs.illinois.edu/spring16/MP4_walkthrough.pptx" style="text-decoration: none">[Pdf]       
-       <hr>
-        </div>    		
-  	
+	    <!-- NCTU project -->
+	   <div class="w3-container">
+			<div class="w3-quarter">
+				<img src="project/nctu_bs/logo.png" height="85%" width="85%">
+			</div>  
+			<div class="w3-threequarter">
+			  <h5 class="w3-text-black"><b>Human tracking mobile robots with Kinect</b></h5>
+			  <h6 class="w3-text-black">National Chiao Tung University </h6>
+			  <h6 class="w3-text-grey"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jul 2014 - Aug 2014</h6>
+			  <li> Identified user’s patterns with SIFT and GMM background subtraction algorithms</li> 
+			  <li>Integrated depth sensor information, target user features and mobile robot control</li>
+			  <li> Supervised by <a href="http://people.cs.nctu.edu.tw/~whtsai/" style="text-decoration: none">  Prof. Wen-Hsiang Tsai</li> 
+			   <a href="https://www.youtube.com/watch?v=ApBCORImH50" style="text-decoration: none"> [Video]</a>
+			  <hr>
+			</div>
+		</div>
 
 
-    <!-- Cornell-->
-    <div class="w3-container">
-                  <h5 class="w3-opacity"><b>Image collage based on emotional region of interest (ROI)</b></h5>
-              <h6 class="w3-opacity"><b>Cornell University Advanced Multimedia lab</b></h6>
-                  <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jul 2014 - Aug 2014</h6>
-                  <li> Summer intern student in <a href="http://chenlab.ece.cornell.edu/" style="text-decoration: none">  Advanced Multimedia Lab </a> directed by Prof. Tsuhan Chen</li>
-              <li> Utilizing the emotional ROI, our system stochastically generated image collage which displayed the salient region with the most emotion</li>
-                   <a href="project\cornell\report.pdf" style="text-decoration: none">[Pdf]</a>
-                   <a href="https://youtu.be/TKInWk_gs0k" style="text-decoration: none">[Video]</a>
-              <hr>
-                  <img src="img/cornell.png" style="width:75%" >
-                 <hr>
-        </div> 
-
-
-    <!-- NCTU project-->
-    <div class="w3-container">
-                <h5 class="w3-opacity"><b>Human tracking mobile robots with Kinect</b></h5>
-      <h6 class="w3-opacity"><b>National Chiao Tung University</b></h6>
-                <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jul 2013 - Dec 2013</h6>
-            <li> Identified user’s patterns with SIFT and GMM background subtraction algorithms</li>
-            <li> Integrated depth sensor information, target user features and mobile robot control </li>
-                <li> Supervised by <a href="http://people.cs.nctu.edu.tw/~whtsai/" style="text-decoration: none">  Prof. Wen-Hsiang Tsai </a></li>
-            <a href="https://www.youtube.com/watch?v=ApBCORImH50" style="text-decoration: none"> [Video]</a>
-                <hr>
-        </div>  
 
 	
         </div>
@@ -130,10 +171,8 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
   <!-- End Page Container -->
 </div>
 
-<footer class="w3-container w3-teal w3-center w3-margin-top">
-  <a href=" https://www.facebook.com/CHIHHUIHO"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
-  <a href="https://www.linkedin.com/in/chih-hui-ho/"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
-  <p>Designed by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+<footer class="footer-color text-center footer-margin-top">
+  <p>Copyright @ Chih-Hui(John) Ho 2019</p>
 </footer>
 
 </body>
