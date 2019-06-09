@@ -57,8 +57,8 @@ body{
   font-style: italic !important;
 }
 
-span { font-size: 150%;}
-span b { font-size: 150%; }
+span { font-size: 18px; }
+span b { font-size: 18px; }
 
 /*container size*/
 .title{
