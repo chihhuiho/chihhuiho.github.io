@@ -1,3 +1,4 @@
+import os
 
 f=open("index.html", "w")
 f.write("<!doctype html>\n\
@@ -13,8 +14,11 @@ f.write("<!doctype html>\n\
 <body>\n\
 <div class=\"container\">\n\
 <header>\n")
-for i in range(552,886):
-	f.write("<h1></h1><img src=\"./gif/MVI_"+ str(i).zfill(4) + ".gif\"")
+for cls in os.listdir("gif"):
+    f.write("<h1>" + str(cls) + "</h1>")
+    for gif in os.listdir("gif/" + str(cls)):
+        f.write("<h1></h1><img src=\"gif/" + str(cls) + "/" + str(gif) + "\"")
+    f.write("<p> </p>")
 f.write("<p> </p>\
 </header>\
 </div>\
