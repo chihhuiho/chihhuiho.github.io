@@ -89,4 +89,26 @@ span b { font-size: 18px; }
 /*Grid*/
 .grid-bottom-padding{padding-bottom:160px}
 
+/*News*/
+#news {
+	float: center;
+	width: 100%;
+	background-color:transparent;
+	max-height:150px;
+	overflow: scroll;
+	border:8px solid lightblue;
+	/*padding:2%*/
+}
+
+/*publication*/
+#publication {
+	float: center;
+	width: 100%;
+	background-color:transparent;
+	max-height:600px;
+	overflow: scroll;
+	border:8px solid lightblue;
+	/*padding:2%*/
+}
+
 
