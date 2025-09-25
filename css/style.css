@@ -94,7 +94,7 @@ span b { font-size: 18px; }
 	float: center;
 	width: 100%;
 	background-color:transparent;
-	max-height:150px;
+	max-height:420px;
 	overflow: scroll;
 	border:8px solid lightblue;
 	/*padding:2%*/
