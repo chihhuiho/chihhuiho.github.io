@@ -1,427 +1,539 @@
 <!DOCTYPE html>
-<html>
-<title>Chih-Hui (John) Ho</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chih-Hui (John) Ho</title>
+  <meta
+    name="description"
+    content="Chih-Hui (John) Ho — Senior Applied AI Researcher working on domain-specific multimodal GenAI, computer vision, and deep learning."
+  />
 
-<!-- CSS  -->
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
 
+  <style>
+    :root {
+      --bg: #f5f7fb;
+      --panel: rgba(255, 255, 255, 0.88);
+      --panel-strong: #ffffff;
+      --text: #172033;
+      --muted: #5b6475;
+      --line: #e6eaf2;
+      --primary: #2563eb;
+      --primary-soft: #dbeafe;
+      --shadow: 0 18px 50px rgba(15, 23, 42, 0.08);
+      --radius: 22px;
+      --radius-sm: 14px;
+      --max-width: 1240px;
+    }
 
-<b:if cond='data:post.firstImageUrl'>
-<img expr:src ="data:post.firstImageUrl" expr:alt="data:post.title"/>
-</b:if>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Inter", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(37, 99, 235, 0.1), transparent 30%),
+        radial-gradient(circle at top right, rgba(59, 130, 246, 0.08), transparent 28%),
+        var(--bg);
+      line-height: 1.65;
+    }
 
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
 
-<style>
-html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
-</style>
-<body class="body-color">
+    a:hover {
+      text-decoration: underline;
+    }
 
-<!-- Page Container -->
-<div class="page-max-width page-margin-top" style="max-width:2000px;">
+    img {
+      max-width: 100%;
+      display: block;
+    }
 
-  <!-- The Grid -->
-  <div class="w3-row-padding">
-  
-    <!-- Left Column -->
-    <div class="w3-third">
-    
-      <div class="w3-white w3-text-black w3-card-4">
-        <div class="w3-display-container">
-          <img src="img/avatar.jpg" style="width:100%" alt="Avatar">
-		  
+    .shell {
+      width: min(calc(100% - 32px), var(--max-width));
+      margin: 28px auto 56px;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 330px minmax(0, 1fr);
+      gap: 24px;
+      align-items: start;
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(12px);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 20px;
+      overflow: hidden;
+    }
+
+    .hero-image {
+      aspect-ratio: 4 / 4.1;
+      object-fit: cover;
+      width: 100%;
+    }
+
+    .sidebar-body {
+      padding: 24px;
+    }
+
+    .name {
+      margin: 0;
+      font-size: 1.9rem;
+      line-height: 1.1;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+    }
+
+    .name-alt {
+      margin: 8px 0 18px;
+      font-size: 1.1rem;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    audio {
+      width: 100%;
+      margin: 0 0 18px;
+    }
+
+    .contact-list,
+    .nav-list,
+    .quick-links {
+      display: grid;
+      gap: 10px;
+    }
+
+    .contact-item,
+    .nav-link,
+    .quick-link {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 11px 14px;
+      border-radius: 14px;
+      background: #fff;
+      border: 1px solid var(--line);
+      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+    }
+
+    .contact-item:hover,
+    .nav-link:hover,
+    .quick-link:hover {
+      transform: translateY(-1px);
+      border-color: #c9d8ff;
+      box-shadow: 0 10px 24px rgba(37, 99, 235, 0.08);
+      text-decoration: none;
+    }
+
+    .contact-item i,
+    .nav-link i,
+    .quick-link i {
+      width: 18px;
+      text-align: center;
+      color: var(--primary);
+    }
+
+    .section-stack {
+      display: grid;
+      gap: 24px;
+    }
+
+    .section-card {
+      padding: 28px;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+    }
+
+    .section-title {
+      margin: 0;
+      font-size: 1.55rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .section-title i {
+      color: var(--primary);
+    }
+
+    .logo-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .logo-chip {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 8px 10px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-chip img {
+      max-height: 28px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .about-text {
+      font-size: 1.02rem;
+      color: #263145;
+    }
+
+    .about-text p {
+      margin: 0;
+    }
+
+    .news-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 12px;
+    }
+
+    .news-item {
+      display: grid;
+      grid-template-columns: 92px 1fr;
+      gap: 14px;
+      padding: 14px 16px;
+      border-radius: 16px;
+      background: linear-gradient(180deg, #ffffff 0%, #fbfcff 100%);
+      border: 1px solid var(--line);
+    }
+
+    .news-date {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.92rem;
+    }
+
+    .publication-list {
+      display: grid;
+      gap: 16px;
+    }
+
+    .publication-item {
+      display: grid;
+      grid-template-columns: 180px minmax(0, 1fr);
+      gap: 18px;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: linear-gradient(180deg, #ffffff 0%, #fcfdff 100%);
+    }
+
+    .publication-thumb {
+      width: 100%;
+      aspect-ratio: 1.2 / 1;
+      object-fit: cover;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      background: #f8fafc;
+    }
+
+    .publication-title {
+      margin: 0 0 8px;
+      font-size: 1.08rem;
+      font-weight: 800;
+      line-height: 1.35;
+    }
+
+    .publication-authors,
+    .publication-venue {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+
+    .publication-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: var(--primary-soft);
+      color: #1849b8;
+      font-weight: 600;
+      font-size: 0.92rem;
+      border: 1px solid #bfdbfe;
+    }
+
+    .muted-label {
+      margin: 22px 0 10px;
+      color: var(--muted);
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    footer {
+      width: min(calc(100% - 32px), var(--max-width));
+      margin: 0 auto 32px;
+      padding: 18px 22px;
+      color: var(--muted);
+      text-align: center;
+      border-top: 1px solid var(--line);
+    }
+
+    @media (max-width: 1000px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        position: static;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .shell {
+        width: min(calc(100% - 20px), var(--max-width));
+        margin-top: 14px;
+      }
+
+      .section-card,
+      .sidebar-body {
+        padding: 20px;
+      }
+
+      .publication-item,
+      .news-item {
+        grid-template-columns: 1fr;
+      }
+
+      .publication-item {
+        gap: 14px;
+      }
+
+      .name {
+        font-size: 1.65rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <div class="layout">
+      <aside class="card sidebar">
+        <img src="img/avatar.jpg" alt="Chih-Hui (John) Ho" class="hero-image" />
+
+        <div class="sidebar-body">
+          <h1 class="name">Chih-Hui (John) Ho</h1>
+          <div class="name-alt">何智輝</div>
+
+          <audio controls>
+            <source src="mp3/name.mp3" type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
+
+          <div class="contact-list">
+            <div class="contact-item"><i class="fa fa-home"></i><span>San Diego, US</span></div>
+            <a class="contact-item" href="mailto:chh279@eng.ucsd.edu"><i class="fa fa-envelope"></i><span>chh279@eng.ucsd.edu</span></a>
+            <a class="contact-item" href="mailto:bill83221@gmail.com"><i class="fa fa-envelope"></i><span>bill83221@gmail.com</span></a>
+            <a class="contact-item" href="https://www.linkedin.com/in/chih-hui-ho/" target="_blank" rel="noreferrer"><i class="fa fa-linkedin"></i><span>LinkedIn</span></a>
+            <a class="contact-item" href="CV.pdf"><i class="fa fa-file-text-o"></i><span>Curriculum Vitae</span></a>
+            <a class="contact-item" href="https://scholar.google.com/citations?user=9GFLGgUAAAAJ&hl=en&authuser=2" target="_blank" rel="noreferrer"><i class="fa fa-graduation-cap"></i><span>Google Scholar</span></a>
+          </div>
+
+          <div class="muted-label">Navigation</div>
+          <nav class="nav-list">
+            <a class="nav-link" href="index.html"><i class="fa fa-home"></i><span>Home</span></a>
+            <a class="nav-link" href="about.html"><i class="fa fa-user"></i><span>About</span></a>
+            <a class="nav-link" href="education.html"><i class="fa fa-university"></i><span>Education</span></a>
+            <a class="nav-link" href="publication.html"><i class="fa fa-file-text"></i><span>Publications</span></a>
+            <a class="nav-link" href="work.html"><i class="fa fa-suitcase"></i><span>Work Experience</span></a>
+            <a class="nav-link" href="project.html"><i class="fa fa-book"></i><span>Research Projects</span></a>
+            <a class="nav-link" href="academic_service.html"><i class="fa fa-users"></i><span>Academic Service</span></a>
+            <a class="nav-link" href="volunteer.html"><i class="fa fa-handshake-o"></i><span>Volunteer</span></a>
+          </nav>
         </div>
+      </aside>
 
+      <div class="section-stack">
+        <section class="card section-card">
+          <div class="section-header">
+            <h2 class="section-title"><i class="fa fa-university"></i>About</h2>
+            <div class="logo-row">
+              <div class="logo-chip"><img src="img/a8_logo.png" alt="Articul8 logo" /></div>
+              <div class="logo-chip"><img src="img/ucsd_logo.png" alt="UCSD logo" /></div>
+              <div class="logo-chip"><img src="img/merl.png" alt="MERL logo" /></div>
+              <div class="logo-chip"><img src="img/amazon_logo.png" alt="Amazon logo" /></div>
+              <div class="logo-chip"><img src="img/uiuc_logo.png" alt="UIUC logo" /></div>
+              <div class="logo-chip"><img src="img/itri_logo.jpg" alt="ITRI logo" /></div>
+              <div class="logo-chip"><img src="img/cornell_logo.png" alt="Cornell logo" /></div>
+              <div class="logo-chip"><img src="img/nctu_logo.png" alt="NCTU logo" /></div>
+              <div class="logo-chip"><img src="img/kshs_logo.png" alt="KSHS logo" /></div>
+            </div>
+          </div>
 
+          <div class="about-text">
+            <p>
+              I am a Senior Applied AI Researcher at
+              <a href="https://www.articul8.ai/" target="_blank" rel="noreferrer">Articul8</a>,
+              where I build domain-specific multimodal GenAI systems. I received my PhD from the
+              University of California San Diego (UCSD) in the
+              <a href="http://www.svcl.ucsd.edu/" target="_blank" rel="noreferrer">Statistical Visual Computing Lab</a>,
+              advised by Prof. Nuno Vasconcelos. My research interests include multimodal GenAI,
+              computer vision, and deep learning. I have also interned at MERL and Amazon AWS AI.
+              Before my PhD, I earned my MS in CSE from UCSD and my BS from National Chiao Tung University in Taiwan.
+            </p>
+          </div>
+        </section>
 
-        <div class="w3-container">
-		     
-            <h2><b>Chih-Hui (John) Ho</b></h2>
-			      <h2><b>何智輝</b></h2>
-            <audio controls>
-              <source src="mp3/name.mp3" type="audio/mpeg">
-				Your browser does not support the audio element.
-            </audio> 
+        <section class="card section-card">
+          <div class="section-header">
+            <h2 class="section-title"><i class="fa fa-bullhorn"></i>News</h2>
+          </div>
 
-          <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-blue"></i>San Diego, US</p>
-          <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-blue"></i><a href="mailto:chh279@eng.ucsd.edu">chh279(at)eng.ucsd.edu</a></p>
-		  <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-blue"></i><a href="mailto:bill83221@gmail.com">bill83221(at)gmail.com</a></p>
-		  <p><i class="fa fa-linkedin fa-fw w3-margin-right w3-large w3-text-blue"></i><a href="https://www.linkedin.com/in/chih-hui-ho/">Linkedin</a></p>
-          <p><i class="fa fa-file fa-fw w3-margin-right w3-large w3-text-blue"></i><a href="CV.pdf">CV</a></p>
-		  <p><img src="img/scholar.png" class="w3-round" width="5%" height="5%" style="margin: 0px 16px 0px 0px;"><a href="https://scholar.google.com/citations?user=9GFLGgUAAAAJ&hl=en&authuser=2">Google Scholar</a></p> 
-          <hr>
+          <ul class="news-list">
+            <li class="news-item">
+              <div class="news-date">12/2025</div>
+              <div>One paper accepted to NeurIPS <a href="https://openreview.net/pdf?id=UnyGYiucVs">UniReps Workshop</a>.</div>
+            </li>
+            <li class="news-item">
+              <div class="news-date">09/2025</div>
+              <div>One paper accepted to ICCV <a href="https://cvam-workshop.github.io/accepted-papers/">CVAM Workshop</a>.</div>
+            </li>
+            <li class="news-item">
+              <div class="news-date">09/2025</div>
+              <div>I will be serving as a reviewer for CVPR 2026.</div>
+            </li>
+            <li class="news-item">
+              <div class="news-date">08/2025</div>
+              <div>Featured in Articul8’s blog post on domain-specific models outperforming general-purpose models.</div>
+            </li>
+            <li class="news-item">
+              <div class="news-date">05/2025</div>
+              <div>Featured in Articul8’s blog post on energy-domain-specific GenAI models.</div>
+            </li>
+            <li class="news-item">
+              <div class="news-date">03/2025</div>
+              <div>I attended GTC 2025 with the Articul8 team.</div>
+            </li>
+            <li class="news-item">
+              <div class="news-date">01/2025</div>
+              <div>I started a new position as Senior Applied AI Researcher at Articul8.ai.</div>
+            </li>
+          </ul>
+        </section>
 
+        <section class="card section-card">
+          <div class="section-header">
+            <h2 class="section-title"><i class="fa fa-book"></i>Selected Publications</h2>
+          </div>
 
-      <p class="w3-large"><b><i class="fa fa-home fa-fw w3-margin-right w3-text-blue"></i><a href="index.html"  style="text-decoration: none">Home</a></b></p>
-      <p class="w3-large"><b><i class="fa fa-user fa-fw w3-margin-right w3-text-blue"></i><a href="about.html"  style="text-decoration: none">About</a></b></p>
-  	  <p class="w3-large"><b><i class="fa fa-university fa-fw w3-margin-right w3-text-blue"></i><a href="education.html"  style="text-decoration: none">Education</a></b></p>
-	  <p class="w3-large"><b><i class="fa fa-file fa-fw w3-margin-right w3-text-blue"></i><a href="publication.html"  style="text-decoration: none">Publication</a></b></p>
-  	  <p class="w3-large"><b><i class="fa fa-suitcase fa-fw w3-margin-right w3-text-blue"></i><a href="work.html"  style="text-decoration: none">Work Experience</a></b></p>
-  	  <p class="w3-large"><b><i class="fa fa-book fa-fw w3-margin-right w3-text-blue"></i><a href="project.html"  style="text-decoration: none">Research Projects</a></b></p>
-  	  <p class="w3-large"><b><i class="fa fa-users fa-fw w3-margin-right w3-text-blue"></i><a href="academic_service.html"  style="text-decoration: none">Academic service</a></b></p>
-      <p class="w3-large"><b><i class="fa fa-handshake-o fa-fw w3-margin-right w3-text-blue"></i><a href="volunteer.html"  style="text-decoration: none">Volunteer</a></b></p>
-      <!-- <p class="w3-large"><b><i class="fa fa-file-o fa-fw w3-margin-right w3-text-blue"></i><a href="slide.html"  style="text-decoration: none">Slides</a></b></p> -->
+          <div class="publication-list">
+            <article class="publication-item">
+              <img class="publication-thumb" src="publication/Protect/main_fig.PNG" alt="ProTeCt paper figure" />
+              <div>
+                <h3 class="publication-title">ProTeCt: Prompt Tuning for Taxonomic Open Set Classification</h3>
+                <p class="publication-authors"><strong>Chih-Hui Ho*</strong>, <strong>Tz-Ying Wu*</strong>, Nuno Vasconcelos</p>
+                <p class="publication-venue">CVPR 2024 · Seattle, United States</p>
+                <div class="publication-links">
+                  <a class="pill" href="https://arxiv.org/pdf/2306.02240.pdf">Paper</a>
+                  <a class="pill" href="https://github.com/gina9726/ProTeCt">Code</a>
+                  <a class="pill" href="http://www.svcl.ucsd.edu/projects/protect/">Website</a>
+                </div>
+              </div>
+            </article>
 
-        </div>
-      </div><br>
+            <article class="publication-item">
+              <img class="publication-thumb" src="publication/LTAD/main_fig.png" alt="LTAD paper figure" />
+              <div>
+                <h3 class="publication-title">Long-Tailed Anomaly Detection with Learnable Class Names</h3>
+                <p class="publication-authors"><strong>Chih-Hui Ho</strong>, Kuan-Chuan Peng, Nuno Vasconcelos</p>
+                <p class="publication-venue">CVPR 2024 · Seattle, United States</p>
+                <div class="publication-links">
+                  <a class="pill" href="http://www.svcl.ucsd.edu/projects/ltad/img/paper.pdf">Paper</a>
+                  <a class="pill" href="http://www.svcl.ucsd.edu/projects/ltad/img/supp.pdf">Supplemental</a>
+                  <a class="pill" href="https://zenodo.org/records/10854201">Dataset</a>
+                  <a class="pill" href="http://www.svcl.ucsd.edu/projects/ltad/">Website</a>
+                </div>
+              </div>
+            </article>
 
-    <!-- End Left Column -->
+            <article class="publication-item">
+              <img class="publication-thumb" src="publication/RVQA/main_fig.PNG" alt="RVQA paper figure" />
+              <div>
+                <h3 class="publication-title">Toward Unsupervised Realistic Visual Question Answering</h3>
+                <p class="publication-authors"><strong>Chih-Hui Ho*</strong>, <strong>Yuwei Zhang*</strong>, Nuno Vasconcelos</p>
+                <p class="publication-venue">ICCV 2023</p>
+                <div class="publication-links">
+                  <a class="pill" href="https://arxiv.org/pdf/2303.05068.pdf">Paper</a>
+                  <a class="pill" href="http://www.svcl.ucsd.edu/projects/rvqa/assets/rvqa_appendix.pdf">Supplemental</a>
+                  <a class="pill" href="https://github.com/chihhuiho/RGQA">Code</a>
+                  <a class="pill" href="http://www.svcl.ucsd.edu/projects/rvqa">Website</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="publication-item">
+              <img class="publication-thumb" src="publication/Neurips2022_DISCO/main_fig.JPG" alt="DISCO paper figure" />
+              <div>
+                <h3 class="publication-title">DISCO: Adversarial Defense with Local Implicit Functions</h3>
+                <p class="publication-authors"><strong>Chih-Hui Ho</strong>, Nuno Vasconcelos</p>
+                <p class="publication-venue">NeurIPS 2022 · New Orleans, United States</p>
+                <div class="publication-links">
+                  <a class="pill" href="https://openreview.net/pdf?id=vgIz0emVTAd">Paper</a>
+                  <a class="pill" href="https://openreview.net/attachment?id=vgIz0emVTAd&name=supplementary_material">Supplementary</a>
+                  <a class="pill" href="https://github.com/chihhuiho/disco">Code</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
     </div>
+  </main>
 
-    <!-- Right Column -->
-    <div class="w3-twothird">
-
-         	<!-- About-->
-	      <div class="w3-container w3-card w3-white w3-margin-bottom">
-        <h2 class="w3-text-black w3-padding-16"><i class="fa fa-university fa-fw w3-margin-right w3-xxlarge w3-text-blue"></i><b>About</b> 
-		&nbsp; &nbsp; &nbsp; &nbsp;
-		<img src="img/a8_logo.png" height="8%" width="8%">
-		<img src="img/ucsd_logo.png" height="6%" width="6%">
-		<img src="img/merl.png" height="8%" width="8%">
-		<img src="img/amazon_logo.png" height="8%" width="8%">
-		<img src="img/uiuc_logo.png" height="6%" width="6%">
-		<img src="img/itri_logo.jpg" height="6%" width="6%">
-		<img src="img/cornell_logo.png" height="6%" width="6%">
-		<img src="img/nctu_logo.png" height="6%" width="6%">
-		<img src="img/kshs_logo.png" height="6%" width="6%">
-		</h2>
-            <p> (We Are Hiring !!) I am a senior applied AI researcher in <a href="https://www.articul8.ai/">Articul8</a>, building domain specific multi-modal GenAI (see our <a href="https://articul8.ai/news/think-like-a-domain-expert-semiconductor-design-expert-edition">blog</a>).  
-            I received my PhD from University of California San Diego (UCSD) <a href="http://www.svcl.ucsd.edu/">Statistical Visual Computing Lab (SVCL)</a>, advised by Prof. Nuno Vasconcelos. 
-			My areas of research interest are mutli-modal GenAI, computer vision, deep learning (See <a href="publication.html">publication</a> page). 
-			I was an research intern in Mitsubishi Electric Research Laboratories (MERL) and Amazon AWS AI. 
-			Before joining SVCL, I recieved my master degree in UCSD CSE and bachelor degee from National Chiao Tung University in Taiwan. 
-			Before joining UCSD, I worked as a research assistant in Computer Vision Research
-		    Center in NCTU. I was an exchange student in University of Illinois at Urbana Champaign during my junior year and was a research
-		    intern in Cornell University. 
-			</p>
-        </div>
-	  
-	  
-	  <!-- News-->
-	   <!--<div class="w3-container w3-card w3-white w3-margin-bottom">-->
-        <h2 class="w3-text-black w3-padding-16"><i class="fa fa-file fa-fw w3-margin-right w3-xxlarge w3-text-blue"></i><b>News</b></h2>
-			
-		<div id="news">
-			<ul>
-			  <li>12/2025: One paper accepted to Neurips <a href="https://openreview.net/pdf?id=UnyGYiucVs"> UniReps workshop </a>.  </li>
-			  <li>09/2025: One paper accepted to ICCV <a href="https://cvam-workshop.github.io/accepted-papers/"> CVAM workshop </a>.  </li>
-			  <li>09/2025: I will be serving as a reviewer of CVPR2026</li>
-			  <li>08/2025: Excited to be included in the blog post of <a href="https://articul8.ai/blog/the-expert-advantage-domain-specific-models-outperform-general-purpose-models">The Expert Advantage: Domain-specific models outperform General Purpose Models</a> by Articul8.ai </li>
-			  <li>07/2025: I will be serving as a reviewer for ICCV CVAM workshop</li>
-			  <li>05/2025: Excited to be included in the blog post of <a href="https://articul8.ai/blog/building-energy-domain-specific-gen-ai-models-that-reason-like-experts">Building Energy-domain-specific GenAI Models that Reason like Experts</a> by Articul8.ai </li>
-			  <li>03/2025: I will attend GTC 2025 with Articul8 team.</li>
-			  <li>03/2025: I will be serving as a reviewer for ICCV 2025, Neurips 2025 and ACMMM 2025</li>
-			  <li>02/2025: Excited to be included in the blog post of  <a href="https://articul8.ai/blog/think-like-a-domain-expert-semiconductor-design-expert-edition">Think Like a Domain Expert: Semiconductor Design Expert Edition</a> by Articul8.ai </li>
-			  <li>01/2025: I am happy to share that I am starting a new position as Senior Applied AI Researcher at Articul8.ai.</li>
-			  <li>11/2024: I will be serving as a reviewer for CVPR 2025</li>
-			  <li>08/2024: I will be serving as a Program Committee for AAAI 2025</li>
-			  <li>08/2024: One paper accepted at IEEE Transactions on Communications. Paper available <a href="https://ieeexplore.ieee.org/document/10634193"> here </a> </li>
-			  <li>04/2024: Join Articul8.ai as Applied AI Researcher </li>
-			  <li>03/2024: Complete PhD Defense. Presentation is available  <a href="https://youtu.be/fkObc0m7UdE">here</a> </li>
-			  <li>03/2024: Two paper accepted at CVPR24</li>
-			  <li>07/2023: One paper accepted at ICCV23</li>
-			  <li>06/2023-09/2023: Research Internship in MERL. Thank you MERL !!</li>
-			  <li>06/2023: I will be serving as a reviewer of NeurIPS2023</li>
-			  <li>03/2023: I will be serving as a reviewer of ICCV2023</li>
-			  <li>01/2023: I will be serving as a reviewer of CVPR2023</li>
-			  <li>11/2022: Glad to receive 2022 NeurIPS Scholar Award. Thank you NeurIPS !!</li>
-			  <li>08/2022: 1 paper accepted in Neurips 2022</li>
-			  <li>08/2022: 1 paper accepted in ECCV Workshop 2022</li>
-			  <li>07/2022: Glad to be selected as an outstanding reviewer at ICML2022</li>
-			  <li>06/2022: Glad to receive Amazon Post-Internship Fellowship. Thank you Amazon !!</li>
-			  <li>06/2022: 1 paper accepted in CVPR Workshop 2022</li>
-			  <li>05/2022: I will be serving as a reviewer of NeurIPS022</li>
-			  <li>04/2022: I will be serving as a reviewer of ECCV2022</li>
-			  <li>02/2022: I will be serving as a reviewer of ICML2022</li>
-			  <li>11/2021: I will be serving as a reviewer of TPAMI2021</li>
-			  <li>06/2021-09/2021: Applied Scientist Internship in Amazon AWS. Thank you Amazon !!</a></li>
-			  <li>05/2021: Glad to be selected as <a href="http://cvpr2021.thecvf.com/node/184?fbclid=IwAR3MQUHBxA2oQTa4PMtjNODhO2FGZvbnlRFxIbxwyqOOIkKV3-WnLAv-6Iw">CVPR2021 outstanding reviewer</a></li>
-			  <li>05/2021: I will be serving as a reviewer of NeurIPS2021</li>
-			  <li>05/2021: Selected as <a href="https://www.qualcomm.com/research/research/university-relations/innovation-fellowship/2021-north-america">Qualcomm Innovation Fellowship</a> Finalist. Thank you Qualcomm !!</li>
-			  <li>01/2021: I will be serving as a reviewer of ICCV2021</li>
-			  <li>01/2021: I will be serving as a reviewer of ICML2021</li>
-			  <li>10/2020: 1 paper accepted in NeurIPS 2020</li>
-			  <li>10/2020: I will be serving as a reviewer of CVPR2021</li>
-			  <li>07/2020: 1 paper accepted in ECCV 2020</li>
-			  <li>07/2020: I will be serving as a reviewer of ECCV2020 Workshop on Imbalance Problems in Computer Vision (IPCV)</li>
-			  <li>06/2020: I will be serving as a reviewer of WACV (2021), NIPS (2020), ACCV (2020) </li>
-			  <li>03/2020: 1 paper accepted in CVPR 2020</li>
-			  <li>08/2019: 1 preprint paper published on arxiv</li>
-			  <li>06/2019: Graduating with master degree from UCSD Computer Science Engineering (CSE) department.</li>
-			  <li>05/2019: I passed the preliminary exam in UCSD Electrical and Computer Engineering (ECE).</li>
-			  <li>03/2019: 2 papers accepted in CVPR 2019, Long Beach, California</li>
-			  
-			</ul>
-		</div>
-	
-	<!-- Publication-->
-	   <div class="w3-container w3-card w3-white w3-margin-bottom">
-        <h2 class="w3-text-black w3-padding-16"><i class="fa fa-book fa-fw w3-margin-right w3-text-blue"></i><b>Selected publications</b></h2>
-		<!-- <div class="w3-container"> -->
-		<div id="publication">
-
-       <!-- protect -->
-	   <div class="w3-container">
-			<div class="w3-quarter">
-				<img src="publication/Protect/main_fig.PNG" height="90%" width="90%">
-			</div>  
-			<div class="w3-threequarter">
-			  <h5 class="w3-text-black"><b>ProTeCt: Prompt Tuning for Taxonomic Open Set Classification</b></h5>
-			  <h6 class="w3-text-black">
-			  <b>Chih-Hui Ho*</b>, <b>Tz-Ying Wu* </b>, Nuno Vasconcelos<br>
-			  <h6 class="w3-text-black">IEEE Conference on Computer Vision and Pattern Recognition (CVPR), Seattle, United States, 2024</h6>
-			  <a href="https://arxiv.org/pdf/2306.02240.pdf" style="text-decoration: none">[Paper]</a>
-			  <a href="https://github.com/gina9726/ProTeCt" style="text-decoration: none">[Code]</a>
-			  <a href="http://www.svcl.ucsd.edu/projects/protect/" style="text-decoration: none">[Website]</a>
-			  <hr>
-			</div>
-		</div>	
-
-       <!-- ltad -->
-	   <div class="w3-container">
-			<div class="w3-quarter">
-				<img src="publication/LTAD/main_fig.png" height="90%" width="90%">
-			</div>  
-			<div class="w3-threequarter">
-			  <h5 class="w3-text-black"><b>Long-Tailed Anomaly Detection with Learnable Class Names</b></h5>
-			  <h6 class="w3-text-black">
-			  <b>Chih-Hui Ho</b>, Kuan-Chuan Peng, Nuno Vasconcelos<br>
-			  <h6 class="w3-text-black">IEEE Conference on Computer Vision and Pattern Recognition (CVPR), Seattle, United States, 2024</h6>
-			  <a href="http://www.svcl.ucsd.edu/projects/ltad/img/paper.pdf" style="text-decoration: none" >[Paper]</a> 
-				<a href="http://www.svcl.ucsd.edu/projects/ltad/img/supp.pdf" style="text-decoration: none">[Supplemental]</a> 
-				<a href="https://zenodo.org/records/10854201" style="text-decoration: none">[Dataset]</a> 
-				<a href="http://www.svcl.ucsd.edu/projects/ltad/" style="text-decoration: none">[Website]</a> 
-			  <hr>
-			</div>
-		</div>	
-
-
-		
-		
-       <!-- RVQA -->
-	   <div class="w3-container">
-			<div class="w3-quarter">
-				<img src="publication/RVQA/main_fig.PNG" height="90%" width="90%">
-			</div>  
-			<div class="w3-threequarter">
-			  <h5 class="w3-text-black"><b>Toward Unsupervised Realistic Visual Question Answering</b></h5>
-			  <h6 class="w3-text-black">
-			  <b>Chih-Hui Ho*</b>, <b>Yuwei Zhang* </b>, Nuno Vasconcelos<br>
-			  <h6 class="w3-text-black">International Conference on Computer Vision (2023)</h6>
-			  <a href="https://arxiv.org/pdf/2303.05068.pdf" style="text-decoration: none" >[Paper]</a> 
-				<a href="http://www.svcl.ucsd.edu/projects/rvqa/assets/rvqa_appendix.pdf" style="text-decoration: none">[Supplemental]</a> 
-				<a href="https://github.com/chihhuiho/RGQA" style="text-decoration: none">[Code]</a> 
-				<a href="http://www.svcl.ucsd.edu/projects/rvqa" style="text-decoration: none">[Website]</a> 
-			  <hr>
-			</div>
-		</div>	
-		
-        <!-- DISCO -->
-		   <div class="w3-container">
-				<div class="w3-quarter">
-					<img src="publication/Neurips2022_DISCO/main_fig.JPG" height="90%" width="90%">
-				</div>  
-				<div class="w3-threequarter">
-				  <h5 class="w3-text-black"><b>DISCO: Adversarial Defense with Local Implicit Functions</b></h5>
-				  <h6 class="w3-text-black">
-				  <b>Chih-Hui Ho</b>, Nuno Vasconcelos<br>
-				  <h6 class="w3-text-black">Neural Information Processing Systems (NeurIPS), New Orleans, US 2022</h6>
-				  <a href="https://openreview.net/pdf?id=vgIz0emVTAd" style="text-decoration: none">[Paper]</a>
-				  <a href="https://openreview.net/attachment?id=vgIz0emVTAd&name=supplementary_material" style="text-decoration: none">[Supplementary material]</a>
-				  <a href="https://github.com/chihhuiho/disco" style="text-decoration: none">[Code]</a>
-				  <hr>
-				</div>
-			</div>	
-			
-		<!-- YORO -->
-		   <div class="w3-container">
-				<div class="w3-quarter">
-					<img src="publication/ECCVW22_YORO/main_fig.JPG" height="90%" width="90%">
-				</div>  
-				<div class="w3-threequarter">
-				  <h5 class="w3-text-black"><b>YORO - Lightweight End to End Visual Grounding</b></h5>
-				  <h6 class="w3-text-black">
-				  <b>Chih-Hui Ho</b>, Srikar Appalaraju, Bhavan Jasani, R. Manmatha, Nuno Vasconcelos<br>
-				  <h6 class="w3-text-black">European Conference On Computer Vision Workshop (ECCVW), Tel-Aviv, Israel, 2022</h6>
-				  <a href="http://www.svcl.ucsd.edu/people/johnho/publication/eccvw22/eccvw22_yoro.pdf" style="text-decoration: none">[Paper]</a>
-				  <a href="http://www.svcl.ucsd.edu/people/johnho/publication/eccvw22/eccvw22_yoro_supp.pdf" style="text-decoration: none">[Supplementary material]</a>
-				  <a href="https://github.com/chihhuiho/yoro" style="text-decoration: none">[Code]</a>
-				  <hr>
-				</div>
-			</div>	
-
-        <!-- REFINE -->
-		   <div class="w3-container">
-				<div class="w3-quarter">
-					<img src="publication/CVPR2022W_REFINE/main_fig.PNG" height="90%" width="90%">
-				</div>  
-				<div class="w3-threequarter">
-				  <h5 class="w3-text-black"><b>Black-Box Test-Time Shape REFINEment for Single View 3D Reconstruction</b></h5>
-				  <h6 class="w3-text-black">
-				  <p>Brandon Leung, <b>Chih-Hui Ho</b>, Nuno Vasconcelos</p>
-				  <h6 class="w3-text-black">IEEE Conference on Computer Vision and Pattern Recognition Workshop (CVPRW), New Orleans, Louisiana, United States, 2022</h6>
-				  <a href="publication/CVPR2022W_REFINE/main.pdf" style="text-decoration: none">[Paper]</a>
-				  <a href="http://www.svcl.ucsd.edu/projects/OOWL/CVPRW2022_REFINE/REFINE_Supp.pdf" style="text-decoration: none">[Supplementary material]</a>
-				  <a href="http://www.svcl.ucsd.edu/projects/OOWL/CVPRW2022_REFINE.html" style="text-decoration: none">[Website]</a>
-				  <a href="https://github.com/b7leung/REFINE" style="text-decoration: none">[Code]</a>
-				  <a href="https://3dodds.s3.us-west-1.amazonaws.com/3D-ODDS.zip" style="text-decoration: none">[Dataset]</a>
-				  <a href="https://arxiv.org/pdf/2108.09911.pdf" style="text-decoration: none">[ArXiv]</a>
-				  <hr>
-				</div>
-			</div>	
-			
-		<!-- NeurIPS 2020 CLAE -->
-		   <div class="w3-container">
-				<div class="w3-quarter">
-					<img src="./publication/Neurips2020_CLAE/main_fig.png" width="90%">
-				</div>  
-				<div class="w3-threequarter">
-				  <h5 class="w3-text-black"><a href="" style="text-decoration: none">
-				  <b>Contrastive Learning with Adversarial Examples</b></a></h5>
-				  <h6 class="w3-text-black">
-				  <b><a href="http://www.svcl.ucsd.edu/people/johnho/" style="text-decoration: none">Chih-Hui Ho</a></b>,
-				  <a href="http://www.svcl.ucsd.edu/~nuno/" style="text-decoration: none">Nuno Vasconcelos</a>
-				  <h6 class="w3-text-black">Neural Information Processing Systems (NeurIPS) Vancouver, Canada, 2020 (online)</h6>
-				 
-				  <a href="https://arxiv.org/pdf/2010.12050.pdf" style="text-decoration: none">[PDF]</a>
-				  <a href="https://papers.nips.cc/paper/2020/file/c68c9c8258ea7d85472dd6fd0015f047-Supplemental.pdf" style="text-decoration: none">[Supplementary material] </a>
-				  <a href="https://github.com/chihhuiho/CLAE" style="text-decoration: none">[Code]</a>
-				  <a href="https://videos.neurips.cc/search/contrastive%20learning%20with%20adversarial%20example/video/slideslive-38936277" style="text-decoration: none">[Video]</a>
-				  <hr>
-				</div>
-			</div>
-			
-		<!-- ECCV 2020 DeepRTC -->
-		   <div class="w3-container">
-				<div class="w3-quarter">
-					<img src="https://gina9726.github.io/images/deep_rtc.PNG" width="90%">
-				</div>  
-				<div class="w3-threequarter">
-				  <h5 class="w3-text-black"><a href="" style="text-decoration: none">
-				  <b>Solving Long-tailed Recognition with Deep Realistic Taxonomic Classiﬁer</b></a></h5>
-				  <h6 class="w3-text-black">
-				  <a href="http://www.svcl.ucsd.edu/people/gina/" style="text-decoration: none">Tz-Ying Wu</a>,
-				  <a href="http://www.svcl.ucsd.edu/~morgado/" style="text-decoration: none">Pedro Morgado</a>,
-				  <a href="http://www.svcl.ucsd.edu/~peiwang/" style="text-decoration: none">Pei Wang</a>,
-				  <b><a href="http://www.svcl.ucsd.edu/people/johnho/" style="text-decoration: none">Chih-Hui Ho</a></b>,
-				  <a href="http://www.svcl.ucsd.edu/~nuno/" style="text-decoration: none">Nuno Vasconcelos</a>
-				  <h6 class="w3-text-black">European Conference on Computer Vision (ECCV) Glasgow, United Kingdom, 2020 (online)</h6>
-				  
-				  
-				  <a href="http://www.svcl.ucsd.edu/projects/deep-rtc/" style="text-decoration: none">[Website]</a>
-				  <a href="https://arxiv.org/pdf/2007.09898.pdf" style="text-decoration: none">[Arxiv]</a>
-				  <a href="http://www.svcl.ucsd.edu/projects/deep-rtc/assets/deep-rtc_eccv20_supp.pdf" style="text-decoration: none">[Supplementary material]</a>
-				  <a href="https://github.com/gina9726/Deep-RTC" style="text-decoration: none">[Code]</a>
-				  <hr>
-				</div>
-			</div>
-			
-		<!-- CVPR 2020 VISPE -->
-		   <div class="w3-container">
-				<div class="w3-quarter">
-					<img src="publication/CVPR2020_VISPE/main_fig.PNG" width="90%">
-				</div>  
-				<div class="w3-threequarter">
-				  <h5 class="w3-text-black"><a href="" style="text-decoration: none">
-				  <b>Exploit Clues from Views: Self-Supervised and Regularized Learning for 3D Object Recognition</b></a></h5>
-				  <h6 class="w3-text-black">
-				  <b><a href="http://www.svcl.ucsd.edu/people/johnho/" style="text-decoration: none">Chih-Hui Ho</a></b>,
-				  <a href="http://www.svcl.ucsd.edu/people/liubo/" style="text-decoration: none">Bo Liu</a>,
-				  <a href="http://www.svcl.ucsd.edu/people/gina/" style="text-decoration: none">Tz-Ying Wu</a>,
-				  <a href="http://www.svcl.ucsd.edu/~nuno/" style="text-decoration: none">Nuno Vasconcelos</a>
-				  <h6 class="w3-text-black">IEEE Conference on Computer Vision and Pattern Recognition (CVPR), United States, 2020  (online)</h6>
-				  
-				  <a href="https://chihhuiho.github.io/vispe_web/" style="text-decoration: none">[Website]</a>
-				  <a href="https://arxiv.org/pdf/2003.12735.pdf" style="text-decoration: none">[Arxiv]</a>
-				  <a href="publication/CVPR2020_VISPE/supp.pdf" style="text-decoration: none">[Supplementary material]</a>
-				  <a href="https://github.com/chihhuiho/VISPE" style="text-decoration: none">[Code]</a>
-				  <hr>
-				</div>
-			</div>
-			
-
-			
-			<!-- Principal point Calibration -->
-		   <div class="w3-container">
-				<div class="w3-quarter">
-					<img src="publication/PP_calibration/main_fig.PNG" width="70%">
-				</div>  
-				<div class="w3-threequarter">
-				  <h5 class="w3-text-black"><b>A New Technique of Camera Calibration: A Geometric Approach Based on Principal Lines</b></a></h5>
-				  <h6 class="w3-text-black">
-				  Jen-Hui Chuang, 
-				  <b><a href="http://www.svcl.ucsd.edu/people/johnho/" style="text-decoration: none">Chih-Hui Ho</a></b>,
-				  Ardian Umam, HsinYi Chen, Mu-Tien Lu, Jenq-Neng Hwang, Tai-An Chen 
-				  <h6 class="w3-text-black"> IEEE Transactions on Image Processing, 2021  </h6>
-				  <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9318550" style="text-decoration: none">[Paper]</a>
-				  <a href="https://arxiv.org/abs/1908.06539" style="text-decoration: none">[Arxiv]</a>
-				  <hr>
-				</div>
-			</div>
-			
-				
-			<!-- CVPR 2019 PIE -->
-		   <div class="w3-container">
-				<div class="w3-quarter">
-					<img src="publication/CVPR2019_PIE/main_fig.JPG" height="100%" width="90%">
-				</div>  
-				<div class="w3-threequarter">
-				  <h5 class="w3-text-black"><a href="http://www.svcl.ucsd.edu/projects/OOWL/CVPR2019_PIE.html" style="text-decoration: none">
-				  <b>PIEs: Pose Invariant Embeddings</b></a></h5>
-				  <h6 class="w3-text-black">
-				  <b><a href="http://www.svcl.ucsd.edu/people/johnho/" style="text-decoration: none">Chih-Hui Ho</a></b>,
-				  <a href="http://www.svcl.ucsd.edu/~morgado/" style="text-decoration: none">Pedro Morgado</a>,
-				  <a href="http://www.svcl.ucsd.edu/people/amir/" style="text-decoration: none">Amir Persekian</a>,
-				  <a href="http://www.svcl.ucsd.edu/~nuno/" style="text-decoration: none">Nuno Vasconcelos</a>
-				  <h6 class="w3-text-black">IEEE Conference on Computer Vision and Pattern Recognition (CVPR), Long Beach, California, United States, 2019</h6>
-				  <a href="http://www.svcl.ucsd.edu/projects/OOWL/CVPR2019_PIE.html" style="text-decoration: none">[Webpage]</a>
-				  <a href="publication/CVPR2019_PIE/main.pdf" style="text-decoration: none">[Paper]</a>
-				  <a href="publication/CVPR2019_PIE/supp.pdf" style="text-decoration: none">[Supplementary material]</a>
-				  <a href="https://github.com/chihhuiho/PIE_pose_invariant_embedding" style="text-decoration: none">[Code]</a>
-				  <hr>
-				</div>
-			</div>
-
-
-			<!-- CVPR 2019 adversarial -->
-		   <div class="w3-container">
-				<div class="w3-quarter">
-					<img src="publication/CVPR2019_adversarial/main_fig.JPG" height="90%" width="90%">
-				</div>  
-				<div class="w3-threequarter">
-				  <h5 class="w3-text-black"><a href="http://www.svcl.ucsd.edu/projects/OOWL/CVPR2019_adversarial.html" style="text-decoration: none">
-				  <b>Catastrophic Child’s Play: Easy to Perform, Hard to Defend Adversarial Attacks</b></a></h5>
-				  <h6 class="w3-text-black">
-				  <b><a href="http://www.svcl.ucsd.edu/people/johnho/" style="text-decoration: none">Chih-Hui Ho*</a></b>,
-					<a href="http://www.svcl.ucsd.edu/people/brandon/" style="text-decoration: none">Brandon Leung*</a>,
-					<a href="http://www.svcl.ucsd.edu/people/erik/" style="text-decoration: none">Erik Sandstrom</a>,
-					<a href="http://www.svcl.ucsd.edu/people/yen/" style="text-decoration: none">Yen Chang</a>,
-					<a href="http://www.svcl.ucsd.edu/~nuno/" style="text-decoration: none">Nuno Vasconcelos</a>
-					(*indicate equal contribution)
-				  <h6 class="w3-text-black">IEEE Conference on Computer Vision and Pattern Recognition (CVPR), Long Beach, California, United States, 2019</h6>
-				  <a href="http://www.svcl.ucsd.edu/projects/OOWL/CVPR2019_adversarial.html" style="text-decoration: none">[Webpage]</a>
-				  <a href="publication/CVPR2019_adversarial/main.pdf" style="text-decoration: none">[Paper]</a>
-				  <a href="publication/CVPR2019_adversarial/supp.pdf" style="text-decoration: none">[Supplementary material]</a>
-				  <hr>
-				</div>
-			</div>
-		</div>
-    </div>
-	
-    
-  <!-- End Grid -->
-  </div>
-  
-  <!-- End Page Container -->
-</div>
-
-<footer class="footer-color text-center footer-margin-top">
-  <p>Copyright @ Chih-Hui(John) Ho</p>
-</footer>
-
+  <footer>
+    Copyright © Chih-Hui (John) Ho
+  </footer>
 </body>
 </html>

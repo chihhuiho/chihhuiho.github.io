@@ -1,76 +1,369 @@
 <!DOCTYPE html>
-<html>
-<title>Chih-Hui (John) Ho</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- CSS  -->
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-<style>
-html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
-</style>
-<body class="body-color">
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Chih-Hui (John) Ho</title>
+  <meta
+    name="description"
+    content="About Chih-Hui (John) Ho — Senior Applied AI Researcher working on GenAI, computer vision, and deep learning."
+  />
 
-<!-- Page Container -->
-<div class="page-max-width page-margin-top" style="max-width:2000px;">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
 
-  <!-- The Grid -->
-  <div class="w3-row-padding">
-  
-    <!-- Left Column -->
-    <div class="w3-all">
-    
-      <div class="w3-white w3-text-black w3-card-4">
+  <style>
+    :root {
+      --bg: #f5f7fb;
+      --panel: rgba(255, 255, 255, 0.9);
+      --text: #172033;
+      --muted: #5b6475;
+      --line: #e6eaf2;
+      --primary: #2563eb;
+      --primary-soft: #dbeafe;
+      --shadow: 0 18px 50px rgba(15, 23, 42, 0.08);
+      --radius: 22px;
+      --max-width: 1120px;
+    }
 
-        <div class="w3-container">
-		   
-		   
-		   <span>
-			<i class="fa fa-home fa-fw w3-margin-right w3-text-grey"></i><a href="index.html"  style="text-decoration: none">Home</a> 
-			<b><i class="fa fa-user fa-fw w3-margin-right w3-text-blue"></i><a href="about.html"  style="text-decoration: none"><font color="#2196F3">About</font></a></b> 
-			<i class="fa fa-university fa-fw w3-margin-right w3-text-grey"></i><a href="education.html"  style="text-decoration: none">Education</a> 
-			<i class="fa fa-file fa-fw w3-margin-right w3-text-grey"></i><a href="publication.html"  style="text-decoration: none">Publication</a> 
-			<i class="fa fa-suitcase fa-fw w3-margin-right w3-text-grey"></i><a href="work.html"  style="text-decoration: none">Work Experience</a> 
-			<i class="fa fa-book fa-fw w3-margin-right w3-text-grey"></i><a href="project.html"  style="text-decoration: none">Research Projects</a> 
-			<i class="fa fa-users fa-fw w3-margin-right w3-text-grey"></i><a href="academic_service.html"  style="text-decoration: none">Academic service</a> 
-			<i class="fa fa-handshake-o fa-fw w3-margin-right w3-text-grey"></i><a href="volunteer.html"  style="text-decoration: none">Volunteer</a> 
-			<!--  <i class="fa fa-file-o fa-fw w3-margin-right w3-text-grey"></i><a href="slide.html"  style="text-decoration: none">Slides</a>  -->
-		   </span>
-		   <p></p>
-		   
-		   
-		   <p> I received my PhD from University of California San Diego (UCSD) <a href="http://www.svcl.ucsd.edu/">Statistical Visual Computing Lab (SVCL)</a>, advised by Prof. Nuno Vasconcelos. 
-			My areas of research interest are GenAI, computer vision and deep learning (See <a href="publication.html">publication</a> page). 
-			I was an research intern in Mitsubishi Electric Research Laboratories (MERL) and Amazon AWS AI. 
-			Before joining SVCL, I recieved my master degree in UCSD CSE and bachelor degee from National Chiao Tung University in Taiwan. 
-			Before joining UCSD, I worked as a research assistant in Computer Vision Research
-		    Center in NCTU. I was an exchange student in University of Illinois at Urbana Champaign during my junior year and was a research
-		    intern in Cornell University. 
-			</p>
-		   <p>
-			When I am not coding, I am a great cook. I enjoy cooking Chinese cuisine for my friends. And, I roast turkey at Thanksgiving.
-			</p> 
-			<img src="img/turkey.jpg" style="width:40%" >
-			
-			
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Inter", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(37, 99, 235, 0.1), transparent 30%),
+        radial-gradient(circle at top right, rgba(59, 130, 246, 0.08), transparent 28%),
+        var(--bg);
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .shell {
+      width: min(calc(100% - 32px), var(--max-width));
+      margin: 28px auto 56px;
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(12px);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .topbar {
+      padding: 16px 20px;
+      margin-bottom: 22px;
+    }
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .nav-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: #fff;
+      border: 1px solid var(--line);
+      color: var(--muted);
+      font-weight: 600;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+    }
+
+    .nav-link:hover {
+      transform: translateY(-1px);
+      border-color: #c9d8ff;
+      box-shadow: 0 10px 24px rgba(37, 99, 235, 0.08);
+      text-decoration: none;
+    }
+
+    .nav-link.active {
+      color: var(--primary);
+      background: var(--primary-soft);
+      border-color: #bfdbfe;
+    }
+
+    .page {
+      padding: 30px;
+    }
+
+    .header {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) 320px;
+      gap: 24px;
+      align-items: start;
+      margin-bottom: 28px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: var(--primary-soft);
+      color: #1849b8;
+      font-size: 0.84rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(2rem, 5vw, 3rem);
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+    }
+
+    .subtitle {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.05rem;
+      max-width: 62ch;
+    }
+
+    .profile-card {
+      background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 18px;
+    }
+
+    .profile-card img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 16px;
+      border: 1px solid var(--line);
+    }
+
+    .profile-meta {
+      margin-top: 14px;
+      display: grid;
+      gap: 10px;
+    }
+
+    .meta-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .meta-item i {
+      color: var(--primary);
+      width: 16px;
+      text-align: center;
+    }
+
+    .content-grid {
+      display: grid;
+      gap: 22px;
+    }
+
+    .section-block {
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: linear-gradient(180deg, #ffffff 0%, #fcfdff 100%);
+    }
+
+    .section-block h2 {
+      margin: 0 0 12px;
+      font-size: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      letter-spacing: -0.02em;
+    }
+
+    .section-block h2 i {
+      color: var(--primary);
+    }
+
+    .section-block p {
+      margin: 0 0 14px;
+      color: #263145;
+    }
+
+    .section-block p:last-child {
+      margin-bottom: 0;
+    }
+
+    .interest-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: var(--primary-soft);
+      color: #1849b8;
+      font-size: 0.92rem;
+      font-weight: 600;
+      border: 1px solid #bfdbfe;
+    }
+
+    .photo-block {
+      overflow: hidden;
+    }
+
+    .photo-block img {
+      width: min(100%, 520px);
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
+    }
+
+    .photo-caption {
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    footer {
+      width: min(calc(100% - 32px), var(--max-width));
+      margin: 0 auto 32px;
+      padding: 18px 22px;
+      color: var(--muted);
+      text-align: center;
+      border-top: 1px solid var(--line);
+    }
+
+    @media (max-width: 860px) {
+      .header {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .shell {
+        width: min(calc(100% - 20px), var(--max-width));
+        margin-top: 14px;
+      }
+
+      .topbar,
+      .page {
+        padding: 18px;
+      }
+
+      .section-block {
+        padding: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <nav class="card topbar">
+      <div class="nav">
+        <a class="nav-link" href="index.html"><i class="fa fa-home"></i><span>Home</span></a>
+        <a class="nav-link active" href="about.html"><i class="fa fa-user"></i><span>About</span></a>
+        <a class="nav-link" href="education.html"><i class="fa fa-university"></i><span>Education</span></a>
+        <a class="nav-link" href="publication.html"><i class="fa fa-file-text"></i><span>Publications</span></a>
+        <a class="nav-link" href="work.html"><i class="fa fa-suitcase"></i><span>Work Experience</span></a>
+        <a class="nav-link" href="project.html"><i class="fa fa-book"></i><span>Research Projects</span></a>
+        <a class="nav-link" href="academic_service.html"><i class="fa fa-users"></i><span>Academic Service</span></a>
+        <a class="nav-link" href="volunteer.html"><i class="fa fa-handshake-o"></i><span>Volunteer</span></a>
+      </div>
+    </nav>
+
+    <section class="card page">
+      <div class="header">
+        <div>
+          <div class="eyebrow">About</div>
+          <h1>Researcher, builder, and a very serious home cook.</h1>
+          <p class="subtitle">
+            I work at the intersection of GenAI, computer vision, and deep learning, with a focus on building practical systems that reason well in domain-specific settings.
+          </p>
         </div>
-      </div><br>
 
-    <!-- End Left Column -->
-    </div>
+        <aside class="profile-card">
+          <img src="img/avatar.jpg" alt="Chih-Hui (John) Ho" />
+          <div class="profile-meta">
+            <div class="meta-item"><i class="fa fa-user"></i><span>Chih-Hui (John) Ho</span></div>
+            <div class="meta-item"><i class="fa fa-map-marker"></i><span>San Diego, United States</span></div>
+            <div class="meta-item"><i class="fa fa-lightbulb-o"></i><span>GenAI · Vision · Deep Learning</span></div>
+          </div>
+        </aside>
+      </div>
 
-    
-  <!-- End Grid -->
-  </div>
-  
-  <!-- End Page Container -->
-</div>
+      <div class="content-grid">
+        <section class="section-block">
+          <h2><i class="fa fa-graduation-cap"></i>Background</h2>
+          <p>
+            I received my PhD from the University of California San Diego (UCSD) in the
+            <a href="http://www.svcl.ucsd.edu/" target="_blank" rel="noreferrer">Statistical Visual Computing Lab (SVCL)</a>,
+            where I was advised by Prof. Nuno Vasconcelos.
+          </p>
+          <p>
+            My research interests include GenAI, computer vision, and deep learning. I was a research intern at Mitsubishi Electric Research Laboratories (MERL) and Amazon AWS AI.
+            Before joining SVCL, I received my master's degree in UCSD CSE and my bachelor's degree from National Chiao Tung University in Taiwan.
+          </p>
+          <p>
+            Before joining UCSD, I worked as a research assistant in the Computer Vision Research Center at NCTU. I was also an exchange student at the University of Illinois Urbana-Champaign during my junior year and a research intern at Cornell University.
+          </p>
+          <div class="interest-tags">
+            <span class="tag">GenAI</span>
+            <span class="tag">Computer Vision</span>
+            <span class="tag">Deep Learning</span>
+            <span class="tag">Multimodal AI</span>
+          </div>
+        </section>
 
-<footer class="footer-color text-center footer-margin-top">
-  <p>Copyright @ Chih-Hui(John) Ho</p>
-</footer>
+        <section class="section-block">
+          <h2><i class="fa fa-heart-o"></i>Beyond Research</h2>
+          <p>
+            When I am not coding, I am a great cook. I enjoy making Chinese cuisine for friends, and every Thanksgiving I roast turkey.
+          </p>
+        </section>
 
+        <section class="section-block photo-block">
+          <h2><i class="fa fa-camera"></i>Kitchen Moment</h2>
+          <img src="img/turkey.jpg" alt="Thanksgiving turkey cooked by Chih-Hui Ho" />
+          <div class="photo-caption">A favorite tradition outside of research: cooking for friends and family.</div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Copyright © Chih-Hui (John) Ho
+  </footer>
 </body>
 </html>

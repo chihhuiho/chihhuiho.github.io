@@ -1,91 +1,442 @@
 <!DOCTYPE html>
-<html>
-<title>Chih-Hui (John) Ho</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- CSS  -->
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-<style>
-html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
-</style>
-<body class="body-color">
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chih-Hui (John) Ho — Slides</title>
+  <meta
+    name="description"
+    content="Slides and presentations by Chih-Hui (John) Ho."
+  />
 
-<!-- Page Container -->
-<div class="page-max-width page-margin-top" style="max-width:2000px;">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
 
-  <!-- The Grid -->
-  <div class="w3-row-padding">
-  
-    <!-- Left Column -->
-    <div class="w3-all">
-    
-      <div class="w3-white w3-text-grey w3-card-4">
+  <style>
+    :root {
+      --bg: #f5f7fb;
+      --panel: rgba(255, 255, 255, 0.9);
+      --text: #172033;
+      --muted: #5b6475;
+      --line: #e6eaf2;
+      --primary: #2563eb;
+      --primary-soft: #dbeafe;
+      --shadow: 0 18px 50px rgba(15, 23, 42, 0.08);
+      --radius: 22px;
+      --max-width: 1240px;
+    }
 
-        <div class="w3-container">
-		     
-		<span>
-		<i class="fa fa-home fa-fw w3-margin-right w3-text-grey"></i><a href="index.html"  style="text-decoration: none">Home</a>
-		<i class="fa fa-user fa-fw w3-margin-right w3-text-grey"></i><a href="about.html"  style="text-decoration: none">About</a>
-		<i class="fa fa-university fa-fw w3-margin-right w3-text-grey"></i><a href="education.html"  style="text-decoration: none">Education</a>
-		<i class="fa fa-file fa-fw w3-margin-right w3-text-grey"></i><a href="publication.html"  style="text-decoration: none">Publication</a>
-		<i class="fa fa-suitcase fa-fw w3-margin-right w3-text-grey"></i><a href="work.html"  style="text-decoration: none">Work Experience</a>
-		<i class="fa fa-book fa-fw w3-margin-right w3-text-grey"></i><a href="project.html"  style="text-decoration: none">Research Projects</a>
-		<i class="fa fa-users fa-fw w3-margin-right w3-text-grey"></i><a href="academic_service.html"  style="text-decoration: none">Academic service</a>
-		<i class="fa fa-handshake-o fa-fw w3-margin-right w3-text-grey"></i><a href="volunteer.html"  style="text-decoration: none">Volunteer</a>
-		<b><i class="fa fa-file-o fa-fw w3-margin-right w3-text-blue"></i><a href="slide.html"  style="text-decoration: none"><font color="#2196F3">Slides</font></a></b>
-	   </span>
-	   <p></p>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Inter", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(37, 99, 235, 0.1), transparent 30%),
+        radial-gradient(circle at top right, rgba(59, 130, 246, 0.08), transparent 28%),
+        var(--bg);
+      line-height: 1.65;
+    }
 
-	
-	<div class="w3-container">
-                <h5 class="w3-text-black"><b>UCSD ECE Preliminary Exam</h5>
-                <a href="talk\ucsd_prelim.pdf" style="text-decoration: none"> [Presentation]</a>        
-        </div>	
-		
-	<div class="w3-container">
-                <h5 class="w3-text-black"><b>Adversarial based domain adaptation</h5>
-                <a href="talk\John_Ho_SVCL_presentation_ABUDA.pdf" style="text-decoration: none"> [Presentation]</a>        
-        </div>	
-    
-	<div class="w3-container">
-                <h5 class="w3-text-black"><b>Generative visual manipulation on the natural image manifold </b></h5>
-                <a href="project\nctu_ra\presentation.pdf" style="text-decoration: none"> [Presentation]</a>
-                <a href="https://arxiv.org/pdf/1704.00090.pdf" style="text-decoration: none"> [paper]</a>
-        
-        </div>           
-		
-		<div class="w3-container">
-                <h5 class="w3-text-black"><b>Learning to Predict Indoor Illumination from a Single Image </b></h5>
-		            <a href="project\ucsd_cse_291d\presentation.pdf" style="text-decoration: none"> [Presentation]</a>
-                <a href="https://arxiv.org/pdf/1609.03552.pdf" style="text-decoration: none"> [paper]</a>
-   
-        </div>    	
-		
-    <div class="w3-container">
-                <h5 class="w3-text-black"><b> 如何準備高中學測 (How to prepare General Scholastic Ability Test in Taiwan)</b></h5>
-                <a href="project\high_school_test\presentation.pdf" style="text-decoration: none"> [Presentation]</a>
-   
-        </div> 
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
 
+    a:hover {
+      text-decoration: underline;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .shell {
+      width: min(calc(100% - 32px), var(--max-width));
+      margin: 28px auto 56px;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 320px minmax(0, 1fr);
+      gap: 24px;
+      align-items: start;
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(12px);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 20px;
+      overflow: hidden;
+    }
+
+    .hero-image {
+      aspect-ratio: 4 / 4.1;
+      object-fit: cover;
+      width: 100%;
+      background: linear-gradient(135deg, #eaf1ff, #f8fbff);
+    }
+
+    .sidebar-body {
+      padding: 24px;
+    }
+
+    .name {
+      margin: 0;
+      font-size: 1.9rem;
+      line-height: 1.1;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+    }
+
+    .name-alt {
+      margin: 8px 0 18px;
+      font-size: 1.1rem;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .contact-list,
+    .nav-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .contact-item,
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 11px 14px;
+      border-radius: 14px;
+      background: #fff;
+      border: 1px solid var(--line);
+      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+    }
+
+    .contact-item:hover,
+    .nav-link:hover {
+      transform: translateY(-1px);
+      border-color: #c9d8ff;
+      box-shadow: 0 10px 24px rgba(37, 99, 235, 0.08);
+      text-decoration: none;
+    }
+
+    .contact-item i,
+    .nav-link i {
+      width: 18px;
+      text-align: center;
+      color: var(--primary);
+    }
+
+    .muted-label {
+      margin: 22px 0 10px;
+      color: var(--muted);
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .section-stack {
+      display: grid;
+      gap: 24px;
+    }
+
+    .section-card {
+      padding: 28px;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+    }
+
+    .section-title {
+      margin: 0;
+      font-size: 1.55rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .section-title i {
+      color: var(--primary);
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 18px;
+    }
+
+    .intro-panel {
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: linear-gradient(180deg, #ffffff 0%, #fbfcff 100%);
+      padding: 18px;
+    }
+
+    .intro-panel p {
+      margin: 0;
+      color: #263145;
+    }
+
+    .stat-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .stat-item {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: #fff;
+      padding: 14px 16px;
+    }
+
+    .stat-kicker {
+      color: var(--muted);
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .stat-value {
+      font-size: 1rem;
+      font-weight: 700;
+    }
+
+    .slides-list {
+      display: grid;
+      gap: 16px;
+    }
+
+    .slide-item {
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: linear-gradient(180deg, #ffffff 0%, #fcfdff 100%);
+    }
+
+    .slide-title {
+      margin: 0 0 8px;
+      font-size: 1.08rem;
+      font-weight: 800;
+      line-height: 1.35;
+    }
+
+    .slide-meta {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+
+    .slide-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: var(--primary-soft);
+      color: #1849b8;
+      font-weight: 600;
+      font-size: 0.92rem;
+      border: 1px solid #bfdbfe;
+    }
+
+    .active-nav {
+      border-color: #bfdbfe;
+      background: linear-gradient(180deg, #eef4ff 0%, #ffffff 100%);
+      color: #1849b8;
+      font-weight: 700;
+    }
+
+    footer {
+      width: min(calc(100% - 32px), var(--max-width));
+      margin: 0 auto 32px;
+      padding: 18px 22px;
+      color: var(--muted);
+      text-align: center;
+      border-top: 1px solid var(--line);
+    }
+
+    @media (max-width: 1000px) {
+      .layout,
+      .intro-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        position: static;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .shell {
+        width: min(calc(100% - 20px), var(--max-width));
+        margin-top: 14px;
+      }
+
+      .section-card,
+      .sidebar-body {
+        padding: 20px;
+      }
+
+      .name {
+        font-size: 1.65rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <div class="layout">
+      <aside class="card sidebar">
+        <img src="img/avatar.jpg" alt="Chih-Hui (John) Ho" class="hero-image" />
+
+        <div class="sidebar-body">
+          <h1 class="name">Chih-Hui (John) Ho</h1>
+          <div class="name-alt">何智輝</div>
+
+          <div class="contact-list">
+            <div class="contact-item"><i class="fa fa-home"></i><span>San Diego, US</span></div>
+            <a class="contact-item" href="mailto:chh279@eng.ucsd.edu"><i class="fa fa-envelope"></i><span>chh279@eng.ucsd.edu</span></a>
+            <a class="contact-item" href="mailto:bill83221@gmail.com"><i class="fa fa-envelope"></i><span>bill83221@gmail.com</span></a>
+            <a class="contact-item" href="https://www.linkedin.com/in/chih-hui-ho/" target="_blank" rel="noreferrer"><i class="fa fa-linkedin"></i><span>LinkedIn</span></a>
+            <a class="contact-item" href="CV.pdf"><i class="fa fa-file-text-o"></i><span>Curriculum Vitae</span></a>
+            <a class="contact-item" href="https://scholar.google.com/citations?user=9GFLGgUAAAAJ&hl=en&authuser=2" target="_blank" rel="noreferrer"><i class="fa fa-graduation-cap"></i><span>Google Scholar</span></a>
+          </div>
+
+          <div class="muted-label">Navigation</div>
+          <nav class="nav-list">
+            <a class="nav-link" href="index.html"><i class="fa fa-home"></i><span>Home</span></a>
+            <a class="nav-link" href="about.html"><i class="fa fa-user"></i><span>About</span></a>
+            <a class="nav-link" href="education.html"><i class="fa fa-university"></i><span>Education</span></a>
+            <a class="nav-link" href="publication.html"><i class="fa fa-file-text"></i><span>Publications</span></a>
+            <a class="nav-link" href="work.html"><i class="fa fa-suitcase"></i><span>Work Experience</span></a>
+            <a class="nav-link" href="project.html"><i class="fa fa-book"></i><span>Research Projects</span></a>
+            <a class="nav-link" href="academic_service.html"><i class="fa fa-users"></i><span>Academic Service</span></a>
+            <a class="nav-link" href="volunteer.html"><i class="fa fa-handshake-o"></i><span>Volunteer</span></a>
+            <a class="nav-link active-nav" href="slide.html"><i class="fa fa-file-o"></i><span>Slides</span></a>
+          </nav>
         </div>
-      </div><br>
+      </aside>
 
-    <!-- End Left Column -->
+      <div class="section-stack">
+        <section class="card section-card">
+          <div class="section-header">
+            <h2 class="section-title"><i class="fa fa-file-o"></i>Slides</h2>
+          </div>
+
+          <div class="intro-grid">
+            <div class="intro-panel">
+              <p>
+                This page collects selected talks and presentations, including academic exams,
+                research discussions, paper reading presentations, and educational talks. The content
+                from your original slides page has been converted into the same cleaner design language
+                as the rest of the updated site.
+              </p>
+            </div>
+            <div class="stat-list">
+              <div class="stat-item">
+                <div class="stat-kicker">Content</div>
+                <div class="stat-value">Research talks, exam presentations, paper discussions</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-kicker">Language</div>
+                <div class="stat-value">English and Chinese presentations</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="card section-card">
+          <div class="section-header">
+            <h2 class="section-title"><i class="fa fa-book"></i>Presentations</h2>
+          </div>
+
+          <div class="slides-list">
+            <article class="slide-item">
+              <h3 class="slide-title">UCSD ECE Preliminary Exam</h3>
+              <p class="slide-meta">Academic presentation</p>
+              <div class="slide-links">
+                <a class="pill" href="talk/ucsd_prelim.pdf">Presentation</a>
+              </div>
+            </article>
+
+            <article class="slide-item">
+              <h3 class="slide-title">Adversarial Based Domain Adaptation</h3>
+              <p class="slide-meta">Research presentation</p>
+              <div class="slide-links">
+                <a class="pill" href="talk/John_Ho_SVCL_presentation_ABUDA.pdf">Presentation</a>
+              </div>
+            </article>
+
+            <article class="slide-item">
+              <h3 class="slide-title">Generative Visual Manipulation on the Natural Image Manifold</h3>
+              <p class="slide-meta">Paper discussion / research talk</p>
+              <div class="slide-links">
+                <a class="pill" href="project/nctu_ra/presentation.pdf">Presentation</a>
+                <a class="pill" href="https://arxiv.org/pdf/1704.00090.pdf" target="_blank" rel="noreferrer">Paper</a>
+              </div>
+            </article>
+
+            <article class="slide-item">
+              <h3 class="slide-title">Learning to Predict Indoor Illumination from a Single Image</h3>
+              <p class="slide-meta">Paper discussion / research talk</p>
+              <div class="slide-links">
+                <a class="pill" href="project/ucsd_cse_291d/presentation.pdf">Presentation</a>
+                <a class="pill" href="https://arxiv.org/pdf/1609.03552.pdf" target="_blank" rel="noreferrer">Paper</a>
+              </div>
+            </article>
+
+            <article class="slide-item">
+              <h3 class="slide-title">如何準備高中學測 (How to Prepare the General Scholastic Ability Test in Taiwan)</h3>
+              <p class="slide-meta">Educational presentation</p>
+              <div class="slide-links">
+                <a class="pill" href="project/high_school_test/presentation.pdf">Presentation</a>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
     </div>
+  </main>
 
-    
-  <!-- End Grid -->
-  </div>
-  
-  <!-- End Page Container -->
-</div>
-
-<footer class="footer-color text-center footer-margin-top">
-  <p>Copyright @ Chih-Hui(John) Ho </p>
-</footer>
-
+  <footer>
+    Copyright © Chih-Hui (John) Ho
+  </footer>
 </body>
 </html>

@@ -1,104 +1,249 @@
 <!DOCTYPE html>
-<html>
-<title>Chih-Hui (John) Ho</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- CSS  -->
+<html lang="en">
+<head>
+  <title>Academic Service | Chih-Hui (John) Ho</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-<style>
-html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
-</style>
-<body class="body-color">
 
-<!-- Page Container -->
-<div class="page-max-width page-margin-top" style="max-width:2000px;">
+  <style>
+    html, body, h1, h2, h3, h4, h5, h6 {
+      font-family: "Roboto", sans-serif;
+    }
 
-  <!-- The Grid -->
-  <div class="w3-row-padding">
-  
-    <!-- Left Column -->
-    <div class="w3-all">
-    
-      <div class="w3-white w3-text-grey w3-card-4">
+    body {
+      margin: 0;
+      background: #f5f7fa;
+      color: #333;
+    }
 
-        <div class="w3-container">
-		     
-            <span>
-			<i class="fa fa-home fa-fw w3-margin-right w3-text-grey"></i><a href="index.html"  style="text-decoration: none">Home</a>
-			<i class="fa fa-user fa-fw w3-margin-right w3-text-grey"></i><a href="about.html"  style="text-decoration: none">About</a>
-			<i class="fa fa-university fa-fw w3-margin-right w3-text-grey"></i><a href="education.html"  style="text-decoration: none">Education</a>
-			<i class="fa fa-file fa-fw w3-margin-right w3-text-grey"></i><a href="publication.html"  style="text-decoration: none">Publication</a>
-			<i class="fa fa-suitcase fa-fw w3-margin-right w3-text-grey"></i><a href="work.html"  style="text-decoration: none">Work Experience</a>
-			<i class="fa fa-book fa-fw w3-margin-right w3-text-grey"></i><a href="project.html"  style="text-decoration: none">Research Projects</a>
-			<b><i class="fa fa-users fa-fw w3-margin-right w3-text-blue"></i><a href="academic_service.html"  style="text-decoration: none"><font color="#2196F3">Academic service</font></a></b>
-			<i class="fa fa-handshake-o fa-fw w3-margin-right w3-text-grey"></i><a href="volunteer.html"  style="text-decoration: none">Volunteer</a>
-			<!--  <i class="fa fa-file-o fa-fw w3-margin-right w3-text-grey"></i><a href="slide.html"  style="text-decoration: none">Slides</a>  -->
-		   
-		   </span>
-		   <p></p>
-	
-	<div class="w3-container">
-                <h5 class="w3-text-black"><b>Reviewer</h5>
-                <li> CVPR (Outstanding Reviewer for 2021) </li>
-				<li> ICML (Outstanding Reviewer for 2022) </li>
-				<li> NeurIPS </li>   
-				<li> ECCV </li>
-				<li> ICCV </li>
-				<li> ICLR </li>
-				<li> TPAMI </li>
-				<li> AAAI </li>
-				<li> ACCV </li>
-				<li> WACV </li>
-				<li> CVPR Learning with Limited Labelled Data for Image and Video Understanding Workshop </li>
-				<li> ECCV Imbalance Problems in Computer Vision Workshop </li>
-				<li> ICIP </li>      
-     </div>
-	<div class="w3-container">
-                <h5 class="w3-text-black"><b>Program Committee</h5>
-				<li> CVPR Learning with Limited Labelled Data for Image and Video Understanding Workshop [<a href="https://sites.google.com/view/l3d-ivu/organizers" target="_blank">Link</a>]</li>
-				<li> ECCV Imbalance Problems in Computer Vision Workshop [<a href="https://sites.google.com/view/ipcv2020/people" target="_blank">Link</a>]</li>     
-     </div>	
-		
-	<div class="w3-container">
-                <h5 class="w3-text-black"><b>Teaching assistance</h5>
-				
-				<li> ECE 175A Elements of Machine Intelligence [<a href="https://drive.google.com/file/d/1RAMdzfuf7WezbBLsIHU5oZqMB6x49rJK/view?usp=sharing" target="_blank">Discussion Lead</a>](Recording)</li> 
-                <li> ECE 271A Statistical Learning I, UCSD </li> 
-				<li> ECE 271B Statistical Learning II, UCSD </li> 
-				<li> ECE 271C Deep Learning and Applications, UCSD </li>  
-        </div>	
-		
-		
-<div class="w3-container">
-                <h5 class="w3-text-black"><b>Mentorship</h5>
-                <li> UC San Deigo ECE Summer Research Internship Program (SRIP) 
-				[<a href="http://www.svcl.ucsd.edu/projects/OOWL/#srip" target="_blank">project</a>]</li> 
-				<li> UC San Deigo <a href="https://summer.ucsd.edu/program-finder/enlace.html" target="_blank">ENLACE</a> program </li>    
-        </div>	
-		
-		
+    .page-wrapper {
+      max-width: 1100px;
+      margin: 32px auto;
+      padding: 0 16px;
+    }
+
+    .main-card {
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+    }
+
+    .topbar {
+      padding: 20px 28px;
+      border-bottom: 1px solid #e9edf2;
+      background: linear-gradient(135deg, #ffffff, #f8fbff);
+    }
+
+    .topbar-title {
+      margin: 0 0 14px 0;
+      font-size: 28px;
+      font-weight: 700;
+      color: #222;
+    }
+
+    .nav-menu {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 18px;
+      align-items: center;
+    }
+
+    .nav-menu a {
+      text-decoration: none;
+      color: #555;
+      font-size: 15px;
+      transition: color 0.2s ease;
+    }
+
+    .nav-menu a:hover {
+      color: #2196F3;
+    }
+
+    .nav-menu .active a,
+    .nav-menu .active i {
+      color: #2196F3;
+      font-weight: 700;
+    }
+
+    .content-section {
+      padding: 28px;
+    }
+
+    .section-heading {
+      margin: 0 0 24px 0;
+      font-size: 24px;
+      font-weight: 700;
+      color: #222;
+    }
+
+    .service-card {
+      padding: 24px;
+      border: 1px solid #edf1f5;
+      border-radius: 14px;
+      background: #fafcff;
+      margin-bottom: 22px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.06);
+    }
+
+    .service-title {
+      margin: 0 0 14px 0;
+      font-size: 20px;
+      font-weight: 700;
+      color: #222;
+    }
+
+    .service-card ul {
+      margin: 0;
+      padding-left: 22px;
+    }
+
+    .service-card li {
+      margin-bottom: 10px;
+      line-height: 1.7;
+    }
+
+    .service-card a {
+      color: #2196F3;
+      text-decoration: none;
+    }
+
+    .service-card a:hover {
+      text-decoration: underline;
+    }
+
+    .badge {
+      display: inline-block;
+      margin-left: 8px;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: #e8f2fe;
+      color: #1565c0;
+      font-size: 12px;
+      font-weight: 600;
+      vertical-align: middle;
+    }
+
+    footer {
+      text-align: center;
+      padding: 22px 16px;
+      color: #777;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .topbar-title {
+        font-size: 24px;
+      }
+
+      .content-section {
+        padding: 20px;
+      }
+
+      .service-card {
+        padding: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page-wrapper">
+    <div class="main-card">
+
+      <div class="topbar">
+        <h1 class="topbar-title">Academic Service</h1>
+
+        <div class="nav-menu">
+          <span><i class="fa fa-home fa-fw"></i> <a href="index.html">Home</a></span>
+          <span><i class="fa fa-user fa-fw"></i> <a href="about.html">About</a></span>
+          <span><i class="fa fa-university fa-fw"></i> <a href="education.html">Education</a></span>
+          <span><i class="fa fa-file fa-fw"></i> <a href="publication.html">Publication</a></span>
+          <span><i class="fa fa-suitcase fa-fw"></i> <a href="work.html">Work Experience</a></span>
+          <span><i class="fa fa-book fa-fw"></i> <a href="project.html">Research Projects</a></span>
+          <span class="active"><i class="fa fa-users fa-fw"></i> <a href="academic_service.html">Academic Service</a></span>
+          <span><i class="fa fa-handshake-o fa-fw"></i> <a href="volunteer.html">Volunteer</a></span>
+        </div>
+      </div>
+
+      <div class="content-section">
+        <h2 class="section-heading">Professional and Academic Contributions</h2>
+
+        <div class="service-card">
+          <h3 class="service-title">Reviewer</h3>
+          <ul>
+            <li>CVPR <span class="badge">Outstanding Reviewer 2021</span></li>
+            <li>ICML <span class="badge">Outstanding Reviewer 2022</span></li>
+            <li>NeurIPS</li>
+            <li>ECCV</li>
+            <li>ICCV</li>
+            <li>ICLR</li>
+            <li>TPAMI</li>
+            <li>AAAI</li>
+            <li>ACCV</li>
+            <li>WACV</li>
+            <li>CVPR Workshop on Learning with Limited Labeled Data for Image and Video Understanding</li>
+            <li>ECCV Workshop on Imbalance Problems in Computer Vision</li>
+            <li>ICIP</li>
+          </ul>
         </div>
 
-      </div><br>
- 
+        <div class="service-card">
+          <h3 class="service-title">Program Committee</h3>
+          <ul>
+            <li>
+              CVPR Workshop on Learning with Limited Labeled Data for Image and Video Understanding
+              [<a href="https://sites.google.com/view/l3d-ivu/organizers" target="_blank">Link</a>]
+            </li>
+            <li>
+              ECCV Workshop on Imbalance Problems in Computer Vision
+              [<a href="https://sites.google.com/view/ipcv2020/people" target="_blank">Link</a>]
+            </li>
+          </ul>
+        </div>
 
-    <!-- End Left Column -->
+        <div class="service-card">
+          <h3 class="service-title">Teaching Experience</h3>
+          <ul>
+            <li>
+              ECE 175A: Elements of Machine Intelligence
+              [<a href="https://drive.google.com/file/d/1RAMdzfuf7WezbBLsIHU5oZqMB6x49rJK/view?usp=sharing" target="_blank">Discussion Lead Recording</a>]
+            </li>
+            <li>ECE 271A: Statistical Learning I, UC San Diego</li>
+            <li>ECE 271B: Statistical Learning II, UC San Diego</li>
+            <li>ECE 271C: Deep Learning and Applications, UC San Diego</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <h3 class="service-title">Mentorship</h3>
+          <ul>
+            <li>
+              UC San Diego ECE Summer Research Internship Program (SRIP)
+              [<a href="http://www.svcl.ucsd.edu/projects/OOWL/#srip" target="_blank">Project</a>]
+            </li>
+            <li>
+              UC San Diego <a href="https://summer.ucsd.edu/program-finder/enlace.html" target="_blank">ENLACE</a> Program
+            </li>
+          </ul>
+        </div>
+
+      </div>
     </div>
-	
-
-    
-  <!-- End Grid -->
   </div>
-  
-  <!-- End Page Container -->
-</div>
 
-<footer class="footer-color text-center footer-margin-top">
-  <p>Copyright @ Chih-Hui(John) Ho</p>
-</footer>
+  <footer>
+    <p>Copyright © Chih-Hui (John) Ho</p>
+  </footer>
 
 </body>
 </html>

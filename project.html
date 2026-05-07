@@ -1,189 +1,549 @@
 <!DOCTYPE html>
-<html>
-<title>Chih-Hui (John) Ho</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- CSS  -->
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-<style>
-html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
-</style>
-<body class="body-color">
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chih-Hui (John) Ho — Research Projects</title>
+  <meta
+    name="description"
+    content="Research projects by Chih-Hui (John) Ho in computer vision, multimodal AI, robotics, and deep learning."
+  />
 
-<!-- Page Container -->
-<div class="page-max-width page-margin-top" style="max-width:2000px;">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
 
-  <!-- The Grid -->
-  <div class="w3-row-padding">
-  
-    <!-- Left Column -->
-    <div class="w3-all">
-    
-      <div class="w3-white w3-text-grey w3-card-4">
+  <style>
+    :root {
+      --bg: #f5f7fb;
+      --panel: rgba(255, 255, 255, 0.9);
+      --panel-strong: #ffffff;
+      --text: #172033;
+      --muted: #5b6475;
+      --line: #e6eaf2;
+      --primary: #2563eb;
+      --primary-soft: #dbeafe;
+      --shadow: 0 18px 50px rgba(15, 23, 42, 0.08);
+      --radius: 22px;
+      --radius-sm: 14px;
+      --max-width: 1240px;
+    }
 
-        <div class="w3-container">
-		     
-		<span>
-			<i class="fa fa-home fa-fw w3-margin-right w3-text-grey"></i><a href="index.html"  style="text-decoration: none">Home</a>
-			<i class="fa fa-user fa-fw w3-margin-right w3-text-grey"></i><a href="about.html"  style="text-decoration: none">About</a>
-			<i class="fa fa-university fa-fw w3-margin-right w3-text-grey"></i><a href="education.html"  style="text-decoration: none">Education</a>
-			<i class="fa fa-file fa-fw w3-margin-right w3-text-grey"></i><a href="publication.html"  style="text-decoration: none">Publication</a>
-			<i class="fa fa-suitcase fa-fw w3-margin-right w3-text-grey"></i><a href="work.html"  style="text-decoration: none">Work Experience</a>
-			<b><i class="fa fa-book fa-fw w3-margin-right w3-text-blue"></i><a href="project.html"  style="text-decoration: none"><font color="#2196F3">Research Projects</font></a></b>
-			<i class="fa fa-users fa-fw w3-margin-right w3-text-grey"></i><a href="academic_service.html"  style="text-decoration: none">Academic service</a>
-			<i class="fa fa-handshake-o fa-fw w3-margin-right w3-text-grey"></i><a href="volunteer.html"  style="text-decoration: none">Volunteer</a>
-			<!-- <i class="fa fa-file-o fa-fw w3-margin-right w3-text-grey"></i><a href="slide.html"  style="text-decoration: none">Slides</a> -->
-	   </span>
-	   <p></p>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Inter", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(37, 99, 235, 0.1), transparent 30%),
+        radial-gradient(circle at top right, rgba(59, 130, 246, 0.08), transparent 28%),
+        var(--bg);
+      line-height: 1.65;
+    }
 
-		<!-- UCSD OOWL -->
-	   <div class="w3-container">
-			<div class="w3-quarter">
-				<img src="project/oowl/logo.jpg" height="40%" width="40%">
-			</div>  
-			<div class="w3-threequarter">
-			  <h5 class="w3-text-black"><a href="http://www.svcl.ucsd.edu/projects/OOWL/" style="text-decoration: none">
-			  <b>Objects Obtained With fLight (OOWL)</b></a></h5>
-			  <h6 class="w3-text-black">University of California San Diego (UCSD) Statistical Visual Computing Lab (SVCL)</h6>
-			  <h6 class="w3-text-grey"><i class="fa fa-calendar fa-fw w3-margin-right"></i>March 2018 - Present</h6> 
-			  <li> Large-scale 3D reconstruction of real objects</li>
-			  <li> Study of multiview embedding, pose invariant embedding</li>
-			  <li> Study of real world adversarial attack</li>
-			  <a href="http://www.svcl.ucsd.edu/projects/OOWL/" style="text-decoration: none">[Project]</a>
-			  <hr>
-			</div>
-		</div>
-		
-		
-		<!-- UCSD CSE 252c -->
-	   <div class="w3-container">
-			<div class="w3-quarter">
-				<img src="project/ucsd_cse_252c/logo.PNG" height="85%" width="85%">
-			</div>  
-			<div class="w3-threequarter">
-			  <h5 class="w3-text-black"><a href="https://cseweb.ucsd.edu/classes/sp18/cse252C-a/" style="text-decoration: none">
-			  <b>Selected Topics in Vision and Learning</b></a></h5>
-			  <h6 class="w3-text-black">University of California San Diego (UCSD) CSE 252C</h6>
-			  <h6 class="w3-text-grey"><i class="fa fa-calendar fa-fw w3-margin-right"></i>March 2018 - June 2018</h6> 
-			  <li> Implementation of <a href="http://proceedings.mlr.press/v37/ganin15.pdf" style="text-decoration: none">Unsupervised Domain Adaptation by Backpropagation</a></li> 
-			  <a href="project\ucsd_cse_252c\presentation.pdf" style="text-decoration: none">[Presentation]</a>
-		      <a href="https://github.com/neoqy/DDA" style="text-decoration: none">[Code]</a>
-		      <a href="project\ucsd_cse_252c\report.pdf" style="text-decoration: none">[Pdf]</a>
-			  <hr>
-			</div>
-		</div>
-					
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
 
-	    <!-- UCSD CSE 276c -->
-	   <div class="w3-container">
-			<div class="w3-quarter">
-				<img src="project/ucsd_ece_276/logo.PNG" height="80%" width="80%">
-			</div>  
-			<div class="w3-threequarter">
-			  <h5 class="w3-text-black"><b>Robot Reinforcement Learning</b></h5>
-			  <h6 class="w3-text-black">University of California San Diego (UCSD) ECE 276</h6>
-			  <h6 class="w3-text-grey"><i class="fa fa-calendar fa-fw w3-margin-right"></i>March 2018 - June 2018</h6> 
-			  <li> Implementation of advantage actor critic with experience replay</li> 
-			   <a href="https://www.youtube.com/watch?v=RrwP7PyQ0IA&t=601s" style="text-decoration: none">[Video]</a>
-			   <a href="project\ucsd_ece_276\presentation.pdf" style="text-decoration: none">[Presentation]</a>
-			   <a href="https://bitbucket.org/peter_chun_hu/276_hw4/src/master/" style="text-decoration: none">[Code]</a>
-			   <a href="project\ucsd_ece_276\poster.pdf" style="text-decoration: none">[Poster]</a>
-			   <a href="https://www.youtube.com/watch?v=J8iQeNXe16o" style="text-decoration: none">[Trailer]</a>
-			   <a href="project\ucsd_ece_276\report.pdf" style="text-decoration: none">[Pdf]</a>
-			  <hr>
-			</div>
-		</div>
+    a:hover {
+      text-decoration: underline;
+    }
 
-	    <!-- UCSD CSE 253 -->
-	   <div class="w3-container">
-			<div class="w3-quarter">
-				<img src="project/ucsd_cse_253/logo.PNG" height="85%" width="85%">
-			</div>  
-			<div class="w3-threequarter">
-			  <h5 class="w3-text-black"><b>Neural Network for Pattern Recognition</b></h5>
-			  <h6 class="w3-text-black">University of California San Diego (UCSD) CSE 253 </h6>
-			  <h6 class="w3-text-grey"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jan 2018 - March 2018</h6>
-			  <li> <a href="https://www.kaggle.com/c/data-science-bowl-2018" style="text-decoration: none">  Kaggle 2018 data science bowl </a></li> 
-			   <a href="https://youtu.be/g5tZeVLYU70" style="text-decoration: none">[Video]</a>
-			   <a href="project\ucsd_cse_253\presentation.pdf" style="text-decoration: none">[Presentation]</a>
-			   <a href="project\ucsd_cse_253\report.pdf" style="text-decoration: none">[Pdf]</a>
-			  <hr>
-			</div>
-		</div>
+    img {
+      max-width: 100%;
+      display: block;
+    }
 
-	    <!-- UIUC -->
-	   <div class="w3-container">
-			<div class="w3-quarter">
-				<img src="" height="30%" width="30%">
-			</div>  
-			<div class="w3-threequarter">
-			  <h5 class="w3-text-black"><b>Individual Study</b></h5>
-			  <h6 class="w3-text-black">University of Illinois at Urbana-Champaign (UIUC) </h6>
-			  <h6 class="w3-text-grey"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jan 2016 - May 2016</h6>
-			  <li> Individual Study with <a href="http://slazebni.cs.illinois.edu/" style="text-decoration: none"> Prof. Svetlana Lazebnik</a></li>
-			  <li> Design deep learning assignment 4 for <a href="http://slazebni.cs.illinois.edu/spring16/" style="text-decoration: none"> UIUC Spring 2016 CS543/ECE549: Computer Vision</a></li> 			  
-			   <a href="https://www.kaggle.com/c/computer-vision-cs543-ece549" style="text-decoration: none">[Kaggle]</a>
-			  <hr>
-			</div>
-		</div>
+    .shell {
+      width: min(calc(100% - 32px), var(--max-width));
+      margin: 28px auto 56px;
+    }
 
+    .layout {
+      display: grid;
+      grid-template-columns: 320px minmax(0, 1fr);
+      gap: 24px;
+      align-items: start;
+    }
 
-	    <!-- Cornell -->
-	   <div class="w3-container">
-			<div class="w3-quarter">
-				<img src="project/cornell/logo.PNG" height="60%" width="60%">
-			</div>  
-			<div class="w3-threequarter">
-			  <h5 class="w3-text-black"><b>Image collage based on emotional region of interest (ROI)</b></h5>
-			  <h6 class="w3-text-black">Cornell University Advanced Multimedia lab </h6>
-			  <h6 class="w3-text-grey"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jul 2014 - Aug 2014</h6>
-			  <li> Summer intern student in <a href="http://chenlab.ece.cornell.edu/" style="text-decoration: none">  Advanced Multimedia Lab </a> directed by Prof. Tsuhan Chen </a></li> 
-			  <li> Utilizing the emotional ROI, our system stochastically generated image collage which displayed the salient region with the most emotion </a></li> 
-			   <a href="project\cornell\report.pdf" style="text-decoration: none">[Pdf]</a>
-               <a href="https://youtu.be/TKInWk_gs0k" style="text-decoration: none">[Video]</a>
-			  <hr>
-			</div>
-		</div>
+    .card {
+      background: var(--panel);
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(12px);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
 
-	    <!-- NCTU project -->
-	   <div class="w3-container">
-			<div class="w3-quarter">
-				<img src="project/nctu_bs/logo.PNG" height="75%" width="75%">
-			</div>  
-			<div class="w3-threequarter">
-			  <h5 class="w3-text-black"><b>Human tracking mobile robots with Kinect</b></h5>
-			  <h6 class="w3-text-black">National Chiao Tung University </h6>
-			  <h6 class="w3-text-grey"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jul 2013 - Dec 2013</h6>
-			  <li> Identified user’s patterns with SIFT and GMM background subtraction algorithms</li> 
-			  <li>Integrated depth sensor information, target user features and mobile robot control</li>
-			  <li> Supervised by <a href="http://people.cs.nctu.edu.tw/~whtsai/" style="text-decoration: none">  Prof. Wen-Hsiang Tsai</li> 
-			   <a href="https://www.youtube.com/watch?v=ApBCORImH50" style="text-decoration: none"> [Video]</a>
-			  <hr>
-			</div>
-		</div>
+    .sidebar {
+      position: sticky;
+      top: 20px;
+      overflow: hidden;
+    }
 
+    .hero-image {
+      aspect-ratio: 4 / 4.1;
+      object-fit: cover;
+      width: 100%;
+      background: linear-gradient(135deg, #eaf1ff, #f8fbff);
+    }
 
+    .sidebar-body {
+      padding: 24px;
+    }
 
-	
+    .name {
+      margin: 0;
+      font-size: 1.9rem;
+      line-height: 1.1;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+    }
+
+    .name-alt {
+      margin: 8px 0 18px;
+      font-size: 1.1rem;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .contact-list,
+    .nav-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .contact-item,
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 11px 14px;
+      border-radius: 14px;
+      background: #fff;
+      border: 1px solid var(--line);
+      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+    }
+
+    .contact-item:hover,
+    .nav-link:hover {
+      transform: translateY(-1px);
+      border-color: #c9d8ff;
+      box-shadow: 0 10px 24px rgba(37, 99, 235, 0.08);
+      text-decoration: none;
+    }
+
+    .contact-item i,
+    .nav-link i {
+      width: 18px;
+      text-align: center;
+      color: var(--primary);
+    }
+
+    .muted-label {
+      margin: 22px 0 10px;
+      color: var(--muted);
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .section-stack {
+      display: grid;
+      gap: 24px;
+    }
+
+    .section-card {
+      padding: 28px;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+    }
+
+    .section-title {
+      margin: 0;
+      font-size: 1.55rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .section-title i {
+      color: var(--primary);
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 18px;
+    }
+
+    .intro-panel {
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: linear-gradient(180deg, #ffffff 0%, #fbfcff 100%);
+      padding: 18px;
+    }
+
+    .intro-panel p {
+      margin: 0;
+      color: #263145;
+    }
+
+    .stat-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .stat-item {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: #fff;
+      padding: 14px 16px;
+    }
+
+    .stat-kicker {
+      color: var(--muted);
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .stat-value {
+      font-size: 1rem;
+      font-weight: 700;
+    }
+
+    .project-list {
+      display: grid;
+      gap: 18px;
+    }
+
+    .project-item {
+      display: grid;
+      grid-template-columns: 120px minmax(0, 1fr);
+      gap: 18px;
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: linear-gradient(180deg, #ffffff 0%, #fcfdff 100%);
+    }
+
+    .project-logo {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: contain;
+      border-radius: 16px;
+      border: 1px solid var(--line);
+      background: #f8fafc;
+      padding: 14px;
+    }
+
+    .project-title {
+      margin: 0 0 6px;
+      font-size: 1.08rem;
+      font-weight: 800;
+      line-height: 1.35;
+    }
+
+    .project-org,
+    .project-date {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .project-bullets {
+      margin: 14px 0 0;
+      padding-left: 18px;
+      color: #263145;
+    }
+
+    .project-bullets li + li {
+      margin-top: 6px;
+    }
+
+    .project-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: var(--primary-soft);
+      color: #1849b8;
+      font-weight: 600;
+      font-size: 0.92rem;
+      border: 1px solid #bfdbfe;
+    }
+
+    .active-nav {
+      border-color: #bfdbfe;
+      background: linear-gradient(180deg, #eef4ff 0%, #ffffff 100%);
+      color: #1849b8;
+      font-weight: 700;
+    }
+
+    footer {
+      width: min(calc(100% - 32px), var(--max-width));
+      margin: 0 auto 32px;
+      padding: 18px 22px;
+      color: var(--muted);
+      text-align: center;
+      border-top: 1px solid var(--line);
+    }
+
+    @media (max-width: 1000px) {
+      .layout,
+      .intro-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        position: static;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .shell {
+        width: min(calc(100% - 20px), var(--max-width));
+        margin-top: 14px;
+      }
+
+      .section-card,
+      .sidebar-body {
+        padding: 20px;
+      }
+
+      .project-item {
+        grid-template-columns: 1fr;
+      }
+
+      .name {
+        font-size: 1.65rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <div class="layout">
+      <aside class="card sidebar">
+        <img src="img/avatar.jpg" alt="Chih-Hui (John) Ho" class="hero-image" />
+
+        <div class="sidebar-body">
+          <h1 class="name">Chih-Hui (John) Ho</h1>
+          <div class="name-alt">何智輝</div>
+
+          <div class="contact-list">
+            <div class="contact-item"><i class="fa fa-home"></i><span>San Diego, US</span></div>
+            <a class="contact-item" href="mailto:chh279@eng.ucsd.edu"><i class="fa fa-envelope"></i><span>chh279@eng.ucsd.edu</span></a>
+            <a class="contact-item" href="mailto:bill83221@gmail.com"><i class="fa fa-envelope"></i><span>bill83221@gmail.com</span></a>
+            <a class="contact-item" href="https://www.linkedin.com/in/chih-hui-ho/" target="_blank" rel="noreferrer"><i class="fa fa-linkedin"></i><span>LinkedIn</span></a>
+            <a class="contact-item" href="CV.pdf"><i class="fa fa-file-text-o"></i><span>Curriculum Vitae</span></a>
+            <a class="contact-item" href="https://scholar.google.com/citations?user=9GFLGgUAAAAJ&hl=en&authuser=2" target="_blank" rel="noreferrer"><i class="fa fa-graduation-cap"></i><span>Google Scholar</span></a>
+          </div>
+
+          <div class="muted-label">Navigation</div>
+          <nav class="nav-list">
+            <a class="nav-link" href="index.html"><i class="fa fa-home"></i><span>Home</span></a>
+            <a class="nav-link" href="about.html"><i class="fa fa-user"></i><span>About</span></a>
+            <a class="nav-link" href="education.html"><i class="fa fa-university"></i><span>Education</span></a>
+            <a class="nav-link" href="publication.html"><i class="fa fa-file-text"></i><span>Publications</span></a>
+            <a class="nav-link" href="work.html"><i class="fa fa-suitcase"></i><span>Work Experience</span></a>
+            <a class="nav-link active-nav" href="project.html"><i class="fa fa-book"></i><span>Research Projects</span></a>
+            <a class="nav-link" href="academic_service.html"><i class="fa fa-users"></i><span>Academic Service</span></a>
+            <a class="nav-link" href="volunteer.html"><i class="fa fa-handshake-o"></i><span>Volunteer</span></a>
+          </nav>
         </div>
-      </div><br>
+      </aside>
 
-    <!-- End Left Column -->
+      <div class="section-stack">
+        <section class="card section-card">
+          <div class="section-header">
+            <h2 class="section-title"><i class="fa fa-book"></i>Research Projects</h2>
+          </div>
+
+          <div class="intro-grid">
+            <div class="intro-panel">
+              <p>
+                This page highlights selected projects across computer vision, robotics, deep learning,
+                multimodal representation learning, and applied AI research. The content below preserves
+                your original project history, but presents it in the cleaner visual system of your newer homepage.
+              </p>
+            </div>
+            <div class="stat-list">
+              <div class="stat-item">
+                <div class="stat-kicker">Focus Areas</div>
+                <div class="stat-value">Vision, multimodal AI, robotics, representation learning</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-kicker">Institutions</div>
+                <div class="stat-value">UCSD, UIUC, Cornell, NCTU</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="card section-card">
+          <div class="section-header">
+            <h2 class="section-title"><i class="fa fa-folder-open"></i>Selected Work</h2>
+          </div>
+
+          <div class="project-list">
+            <article class="project-item">
+              <img class="project-logo" src="project/oowl/logo.jpg" alt="OOWL project logo" />
+              <div>
+                <h3 class="project-title"><a href="http://www.svcl.ucsd.edu/projects/OOWL/" target="_blank" rel="noreferrer">Objects Obtained With fLight (OOWL)</a></h3>
+                <p class="project-org">University of California San Diego (UCSD) Statistical Visual Computing Lab (SVCL)</p>
+                <p class="project-date">March 2018 – Present</p>
+                <ul class="project-bullets">
+                  <li>Large-scale 3D reconstruction of real objects.</li>
+                  <li>Study of multiview embedding and pose-invariant embedding.</li>
+                  <li>Study of real-world adversarial attack.</li>
+                </ul>
+                <div class="project-links">
+                  <a class="pill" href="http://www.svcl.ucsd.edu/projects/OOWL/" target="_blank" rel="noreferrer">Project</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-item">
+              <img class="project-logo" src="project/ucsd_cse_252c/logo.PNG" alt="CSE 252C logo" />
+              <div>
+                <h3 class="project-title"><a href="https://cseweb.ucsd.edu/classes/sp18/cse252C-a/" target="_blank" rel="noreferrer">Selected Topics in Vision and Learning</a></h3>
+                <p class="project-org">University of California San Diego (UCSD) CSE 252C</p>
+                <p class="project-date">March 2018 – June 2018</p>
+                <ul class="project-bullets">
+                  <li>Implementation of <a href="http://proceedings.mlr.press/v37/ganin15.pdf" target="_blank" rel="noreferrer">Unsupervised Domain Adaptation by Backpropagation</a>.</li>
+                </ul>
+                <div class="project-links">
+                  <a class="pill" href="project/ucsd_cse_252c/presentation.pdf">Presentation</a>
+                  <a class="pill" href="https://github.com/neoqy/DDA" target="_blank" rel="noreferrer">Code</a>
+                  <a class="pill" href="project/ucsd_cse_252c/report.pdf">PDF</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-item">
+              <img class="project-logo" src="project/ucsd_ece_276/logo.PNG" alt="ECE 276 logo" />
+              <div>
+                <h3 class="project-title">Robot Reinforcement Learning</h3>
+                <p class="project-org">University of California San Diego (UCSD) ECE 276</p>
+                <p class="project-date">March 2018 – June 2018</p>
+                <ul class="project-bullets">
+                  <li>Implementation of advantage actor critic with experience replay.</li>
+                </ul>
+                <div class="project-links">
+                  <a class="pill" href="https://www.youtube.com/watch?v=RrwP7PyQ0IA&t=601s" target="_blank" rel="noreferrer">Video</a>
+                  <a class="pill" href="project/ucsd_ece_276/presentation.pdf">Presentation</a>
+                  <a class="pill" href="https://bitbucket.org/peter_chun_hu/276_hw4/src/master/" target="_blank" rel="noreferrer">Code</a>
+                  <a class="pill" href="project/ucsd_ece_276/poster.pdf">Poster</a>
+                  <a class="pill" href="https://www.youtube.com/watch?v=J8iQeNXe16o" target="_blank" rel="noreferrer">Trailer</a>
+                  <a class="pill" href="project/ucsd_ece_276/report.pdf">PDF</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-item">
+              <img class="project-logo" src="project/ucsd_cse_253/logo.PNG" alt="CSE 253 logo" />
+              <div>
+                <h3 class="project-title">Neural Network for Pattern Recognition</h3>
+                <p class="project-org">University of California San Diego (UCSD) CSE 253</p>
+                <p class="project-date">January 2018 – March 2018</p>
+                <ul class="project-bullets">
+                  <li><a href="https://www.kaggle.com/c/data-science-bowl-2018" target="_blank" rel="noreferrer">Kaggle 2018 Data Science Bowl</a>.</li>
+                </ul>
+                <div class="project-links">
+                  <a class="pill" href="https://youtu.be/g5tZeVLYU70" target="_blank" rel="noreferrer">Video</a>
+                  <a class="pill" href="project/ucsd_cse_253/presentation.pdf">Presentation</a>
+                  <a class="pill" href="project/ucsd_cse_253/report.pdf">PDF</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-item">
+              <div class="project-logo" aria-hidden="true" style="display:flex;align-items:center;justify-content:center;font-weight:800;color:#2563eb;font-size:1.4rem;">UIUC</div>
+              <div>
+                <h3 class="project-title">Individual Study</h3>
+                <p class="project-org">University of Illinois at Urbana-Champaign (UIUC)</p>
+                <p class="project-date">January 2016 – May 2016</p>
+                <ul class="project-bullets">
+                  <li>Individual study with <a href="http://slazebni.cs.illinois.edu/" target="_blank" rel="noreferrer">Prof. Svetlana Lazebnik</a>.</li>
+                  <li>Designed deep learning assignment 4 for <a href="http://slazebni.cs.illinois.edu/spring16/" target="_blank" rel="noreferrer">UIUC Spring 2016 CS543/ECE549: Computer Vision</a>.</li>
+                </ul>
+                <div class="project-links">
+                  <a class="pill" href="https://www.kaggle.com/c/computer-vision-cs543-ece549" target="_blank" rel="noreferrer">Kaggle</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-item">
+              <img class="project-logo" src="project/cornell/logo.PNG" alt="Cornell project logo" />
+              <div>
+                <h3 class="project-title">Image Collage Based on Emotional Region of Interest (ROI)</h3>
+                <p class="project-org">Cornell University Advanced Multimedia Lab</p>
+                <p class="project-date">July 2014 – August 2014</p>
+                <ul class="project-bullets">
+                  <li>Summer internship in the <a href="http://chenlab.ece.cornell.edu/" target="_blank" rel="noreferrer">Advanced Multimedia Lab</a> directed by Prof. Tsuhan Chen.</li>
+                  <li>Used emotional ROI to stochastically generate image collages that emphasize the most salient emotional regions.</li>
+                </ul>
+                <div class="project-links">
+                  <a class="pill" href="project/cornell/report.pdf">PDF</a>
+                  <a class="pill" href="https://youtu.be/TKInWk_gs0k" target="_blank" rel="noreferrer">Video</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-item">
+              <img class="project-logo" src="project/nctu_bs/logo.PNG" alt="NCTU project logo" />
+              <div>
+                <h3 class="project-title">Human Tracking Mobile Robots with Kinect</h3>
+                <p class="project-org">National Chiao Tung University</p>
+                <p class="project-date">July 2013 – December 2013</p>
+                <ul class="project-bullets">
+                  <li>Identified user patterns with SIFT and GMM background subtraction algorithms.</li>
+                  <li>Integrated depth sensor information, target user features, and mobile robot control.</li>
+                  <li>Supervised by <a href="http://people.cs.nctu.edu.tw/~whtsai/" target="_blank" rel="noreferrer">Prof. Wen-Hsiang Tsai</a>.</li>
+                </ul>
+                <div class="project-links">
+                  <a class="pill" href="https://www.youtube.com/watch?v=ApBCORImH50" target="_blank" rel="noreferrer">Video</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
     </div>
+  </main>
 
-    
-  <!-- End Grid -->
-  </div>
-  
-  <!-- End Page Container -->
-</div>
-
-<footer class="footer-color text-center footer-margin-top">
-  <p>Copyright @ Chih-Hui(John) Ho </p>
-</footer>
-
+  <footer>
+    Copyright © Chih-Hui (John) Ho
+  </footer>
 </body>
 </html>
